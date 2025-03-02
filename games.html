@@ -181,17 +181,21 @@
 
 <!-- Example Buttons Section -->
 <div style="text-align: center; margin-top: 40px;">
-    <h2 class="section-header">Popular Links</h2>
+    <h2 class="section-header">Games</h2>
     <div class="separator"></div>
-    <button class="url-button" data-url="https://tranquil-banoffee-eb6406.netlify.app/study/rooftopsnipers/game" onclick="openURLFromButton(this)">Games</button>
+    <button class="url-button" data-url="https://tranquil-banoffee-eb6406.netlify.app/cmbrs/10minutestilldawn/index.html" onclick="openURLFromButton(this)">10 minutes till dawn</button>
+    <button class="url-button" data-url="https://tranquil-banoffee-eb6406.netlify.app/cmbrs/1on1soccer/index.html" onclick="openURLFromButton(this)">1on1 soccer</button>
+    <button class="url-button" data-url="https://tranquil-banoffee-eb6406.netlify.app/cmbrs/1v1lol/index.html" onclick="openURLFromButton(this)">1v1.lol</button>
+    <button class="url-button" data-url="https://tranquil-banoffee-eb6406.netlify.app/cmbrs/2048/index.html" onclick="openURLFromButton(this)">2048</button>
+    <button class="url-button" data-url="https://tranquil-banoffee-eb6406.netlify.app/cmbrs/3line/index.html" onclick="openURLFromButton(this)">3Lines</button>
     </div>
 
 <div style="text-align: center; margin-top: 40px;">
-    <h2 class="section-header">Tools</h2>
+    <h2 class="section-header">Return</h2>
     <div class="separator"></div>
-    <button class="url-button" data-url="https://extprint3r.github.io/printer.html" onclick="openURLFromButton(this)">Tools</button></button>
+    <button class="url-button" data-url="https://tranquil-banoffee-eb6406.netlify.app/rebecca.html" onclick="openURLFromButton(this)">Home</button></button>
     
-    <p class="paragraph">(Make sure to allow pop-ups to use t-crack.)</p>
+    
 </div>
 
 <div style="text-align: center; margin-top: 40px;">
@@ -212,7 +216,10 @@ let particlesEnabled = true;
 function isValidURL(string) {
     try {
         new URL(string.startsWith("http") ? string : "https://" + string);
-        return true;
+        return    <button class="url-button" data-url="https://tranquil-banoffee-eb6406.netlify.app/cmbrs/10minutestilldawn/index.html" onclick="openURLFromButton(this)">10 minutes till dawn</button>
+
+
+  true;
     } catch (_) {
         return false;
     }
