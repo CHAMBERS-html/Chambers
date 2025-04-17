@@ -41,42 +41,8 @@
 
   <h1>Chambers Launcher</h1>
 
-  <input type="text" id="searchInput" onkeyup="filterGames()" placeholder="Search for a game...">
-
-  <div id="buttonContainer">
-    <!-- Buttons will go here -->
-  </div>
-
-  <script>
-    function openURLFromButton(button) {
-      const url = button.getAttribute('data-url');
-      window.open(url, '_blank');
-    }
-
-    function filterGames() {
-      const input = document.getElementById("searchInput").value.toLowerCase();
-      const buttons = document.querySelectorAll("#buttonContainer .url-button");
-      buttons.forEach(btn => {
-        const text = btn.textContent.toLowerCase();
-        btn.style.display = text.includes(input) ? "" : "none";
-      });
-    }
-
-    const games = [
-      { name: "LAUNCH CHAMBERS", url: "https://tranquil-banoffee-eb6406.netlify.app/rebecca.html" },
-      
-       ];
-
-    const container = document.getElementById("buttonContainer");
-    games.forEach(game => {
-      const btn = document.createElement("button");
-      btn.className = "url-button";
-      btn.setAttribute("data-url", game.url);
-      btn.setAttribute("onclick", "openURLFromButton(this)");
-      btn.textContent = game.name;
-      container.appendChild(btn);
-    });
-  </script>
-
-</body>
-</html>
+ <!-- Example Buttons Section -->
+<div style="text-align: center; margin-top: 40px;">
+    <h2 class="section-header">Popular Links</h2>
+    <div class="separator"></div>
+    <button class="url-button" data-url="https://tranquil-banoffee-eb6406.netlify.app/rebecca.html" onclick="openURLFromButton(this)">Launch chambers</button>
