@@ -1,11 +1,11 @@
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHMRS</title>
-    <style>
+
+<!-- saved from url=(0057)https://tranquil-banoffee-eb6406.netlify.app/rebecca.html -->
+<html lang="en"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CHMRS</title>
+<style>
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #000;
@@ -142,73 +142,63 @@
         }
 
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+<link href="./yes_files/css2" rel="stylesheet"/>
 </head>
 <body>
-
-<canvas id="particleCanvas"></canvas>
-
+<canvas height="3396" id="particleCanvas" width="1280"></canvas>
 <div style="text-align: center; margin-top: 60px; position: relative; z-index: 1;">
-      <h1 class="page-title">CHAMBERS</h1>
-    <input type="text" id="urlInput" style="padding: 8px 15px; border-radius: 8px; border: none; background-color: #2f2f2f; color: white; width: 90%; box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3);" placeholder="Enter a URL or search term">
-    <button id="openNewTabButton" style="background-color: #8A9A5B; color: white; padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), inset 0 -2px 0 rgba(0, 0, 0, 0.2);">Open</button>
-    <button id="settingsButton" style="font-size: 1.5em; background-color: transparent; border: none; border-radius: 50%; cursor: pointer; color: white; padding: 8px; margin-left: 8px; transition: all 0.3s ease; transform: translateY(4px); box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);">⚙️</button>
-    <h5 class="paragraph">*Info and Debugging at the bottom*</h5>
+<h1 class="page-title">CHAMBERS</h1>
+<input id="urlInput" placeholder="Enter a URL or search term" style="padding: 8px 15px; border-radius: 8px; border: none; background-color: #2f2f2f; color: white; width: 90%; box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3);" type="text"/>
+<button id="openNewTabButton" style="background-color: #8A9A5B; color: white; padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), inset 0 -2px 0 rgba(0, 0, 0, 0.2);">Open</button>
+<button id="settingsButton" style="font-size: 1.5em; background-color: transparent; border: none; border-radius: 50%; cursor: pointer; color: white; padding: 8px; margin-left: 8px; transition: all 0.3s ease; transform: translateY(4px); box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);">⚙️</button>
+<h5 class="paragraph">*Info and Debugging at the bottom*</h5>
 </div>
-
 <div id="settingsMenu">
-    <span id="closeMenu" style="float: right; cursor: pointer; color: #aaa;">❌</span>
-    <h3 style="color: #fff; border-bottom: 1px solid #555; padding-bottom: 10px; margin-bottom: 15px;">Settings</h3>
-    
-    <div style="margin-bottom: 15px;">
-        <button id="googleButton" class="toggle-button active">Google</button>
-        <button id="bingButton" class="toggle-button">Bing</button>
-    </div>
-
-    <label style="color: #bbb; margin-bottom: 5px; display: block;">Tab Title:</label>
-    <input type="text" id="titleInput" style="width: 100%; padding: 8px; border-radius: 8px; border: none; background-color: #333; color: white; box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3); margin-bottom: 10px;">
-
-    <label style="color: #bbb; margin-bottom: 5px; display: block;">Favicon URL:</label>
-    <input type="text" id="faviconInput" style="width: 100%; padding: 8px; border-radius: 8px; border: none; background-color: #333; color: white; box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3); margin-bottom: 15px;">
-
-    <div style="margin-bottom: 15px;">
-        <label style="color: #bbb;">Particles:</label>
-        <button id="particlesToggle" class="toggle-button active">On</button>
-    </div>
-    
-    <button id="resetButton" style="background-color: #e74c3c; color: white; padding: 8px 20px; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); transition: all 0.3s ease;">Reset</button>
+<span id="closeMenu" style="float: right; cursor: pointer; color: #aaa;">❌</span>
+<h3 style="color: #fff; border-bottom: 1px solid #555; padding-bottom: 10px; margin-bottom: 15px;">Settings</h3>
+<div style="margin-bottom: 15px;">
+<button class="toggle-button active" id="googleButton">Google</button>
+<button class="toggle-button" id="bingButton">Bing</button>
 </div>
-
+<label style="color: #bbb; margin-bottom: 5px; display: block;">Tab Title:</label>
+<input id="titleInput" style="width: 100%; padding: 8px; border-radius: 8px; border: none; background-color: #333; color: white; box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3); margin-bottom: 10px;" type="text"/>
+<label style="color: #bbb; margin-bottom: 5px; display: block;">Favicon URL:</label>
+<input id="faviconInput" style="width: 100%; padding: 8px; border-radius: 8px; border: none; background-color: #333; color: white; box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3); margin-bottom: 15px;" type="text"/>
+<div style="margin-bottom: 15px;">
+<label style="color: #bbb;">Particles:</label>
+<button class="toggle-button active" id="particlesToggle">On</button>
+</div>
+<button id="resetButton" style="background-color: #e74c3c; color: white; padding: 8px 20px; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); transition: all 0.3s ease;">Reset</button>
+</div>
 <!-- Example Buttons Section -->
 <div style="text-align: center; margin-top: 40px;">
-    <h2 class="section-header">Games</h2>
-    <div class="separator"></div>
-
+<h2 class="section-header">Games</h2>
+<div class="separator"></div>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/slope/" onclick="openURLFromButton(this)">Slope</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/subwaysurfers/" onclick="openURLFromButton(this)">Subwaysurfers</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/subwaysurfers/" onclick="openURLFromButton(this)">Subway Surfers</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/flappy/" onclick="openURLFromButton(this)">Flappy</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papaspizzaria/" onclick="openURLFromButton(this)">Papaspizzaria</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papasburgeria/" onclick="openURLFromButton(this)">Papasburgeria</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/sm64/" onclick="openURLFromButton(this)">Sm64</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/run3/" onclick="openURLFromButton(this)">Run3</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papaspizzaria/" onclick="openURLFromButton(this)">Papas Pizzaria</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papasburgeria/" onclick="openURLFromButton(this)">Papas Burgeria</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/sm64/" onclick="openURLFromButton(this)">Sm   6 4</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/run3/" onclick="openURLFromButton(this)">Run   3</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/bitlife/" onclick="openURLFromButton(this)">Bitlife</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/crossy/" onclick="openURLFromButton(this)">Crossy</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mc/" onclick="openURLFromButton(this)">Mc</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/cookieclicker/" onclick="openURLFromButton(this)">Cookieclicker</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/templerun2/" onclick="openURLFromButton(this)">Templerun2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/ducklife4/" onclick="openURLFromButton(this)">Ducklife4</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/cookieclicker/" onclick="openURLFromButton(this)">Cookie Clicker</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/templerun2/" onclick="openURLFromButton(this)">Temple Run   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/ducklife4/" onclick="openURLFromButton(this)">Duck Life   4</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/dinogame/" onclick="openURLFromButton(this)">Dinogame</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/jetpackjoyride/" onclick="openURLFromButton(this)">Jetpackjoyride</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/retrobowl/" onclick="openURLFromButton(this)">Retrobowl</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/fruitninja/" onclick="openURLFromButton(this)">Fruitninja</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/fruitninja/" onclick="openURLFromButton(this)">Fruit Ninja</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/doodlejump/" onclick="openURLFromButton(this)">Doodlejump</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/2048/" onclick="openURLFromButton(this)">2048</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/tetris/" onclick="openURLFromButton(this)">Tetris</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/fancypantsadventure/" onclick="openURLFromButton(this)">Fancypantsadventure</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/happywheels/" onclick="openURLFromButton(this)">Happywheels</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papashotdoggeria/" onclick="openURLFromButton(this)">Papashotdoggeria</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/paperio2/" onclick="openURLFromButton(this)">Paperio2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/superhot/" onclick="openURLFromButton(this)">Superhot</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papashotdoggeria/" onclick="openURLFromButton(this)">Papas Hot Doggeria</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/paperio2/" onclick="openURLFromButton(this)">Paperio   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/superhot/" onclick="openURLFromButton(this)">Super Hot</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/thebindingofisaac/" onclick="openURLFromButton(this)">Thebindingofisaac</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/townscaper/" onclick="openURLFromButton(this)">Townscaper</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/tunnelrush/" onclick="openURLFromButton(this)">Tunnelrush</button>
@@ -219,295 +209,295 @@
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/fleeingthecomplex/" onclick="openURLFromButton(this)">Fleeingthecomplex</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/theimpossiblequiz/" onclick="openURLFromButton(this)">Theimpossiblequiz</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/solitaire/" onclick="openURLFromButton(this)">Solitaire</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/drifthunters/" onclick="openURLFromButton(this)">Drifthunters</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/vex6/" onclick="openURLFromButton(this)">Vex6</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/amongus/" onclick="openURLFromButton(this)">Amongus</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/drifthunters/" onclick="openURLFromButton(this)">Drift Hunter S</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/vex6/" onclick="openURLFromButton(this)">Vex   6</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/amongus/" onclick="openURLFromButton(this)">Among Us</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/surf/" onclick="openURLFromButton(this)">Surf</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/motox3m/" onclick="openURLFromButton(this)">Motox3M</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/motox3m/" onclick="openURLFromButton(this)">Motox   3  M</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/fnaf/" onclick="openURLFromButton(this)">Fnaf</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/fnaf-2/" onclick="openURLFromButton(this)">Fnaf 2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/fnaf-3/" onclick="openURLFromButton(this)">Fnaf 3</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/fnaf-4/" onclick="openURLFromButton(this)">Fnaf 4</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/riddleschool/riddleschool1/" onclick="openURLFromButton(this)">Riddleschool1</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/riddleschool/riddleschool2/" onclick="openURLFromButton(this)">Riddleschool2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/riddleschool/riddleschool3/" onclick="openURLFromButton(this)">Riddleschool3</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/riddleschool/riddleschool4/" onclick="openURLFromButton(this)">Riddleschool4</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/riddleschool/riddleschool5/" onclick="openURLFromButton(this)">Riddleschool5</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/riddleschool/riddletransfer/" onclick="openURLFromButton(this)">Riddletransfer</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/riddleschool/riddletransfer2/" onclick="openURLFromButton(this)">Riddletransfer2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/driftboss/" onclick="openURLFromButton(this)">Driftboss</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/fnaf-2/" onclick="openURLFromButton(this)">Fnaf   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/fnaf-3/" onclick="openURLFromButton(this)">Fnaf   3</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/fnaf-4/" onclick="openURLFromButton(this)">Fnaf   4</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/riddleschool/riddleschool1/" onclick="openURLFromButton(this)">Riddle School   1</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/riddleschool/riddleschool2/" onclick="openURLFromButton(this)">Riddle School   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/riddleschool/riddleschool3/" onclick="openURLFromButton(this)">Riddle School   3</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/riddleschool/riddleschool4/" onclick="openURLFromButton(this)">Riddle School   4</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/riddleschool/riddleschool5/" onclick="openURLFromButton(this)">Riddle School   5</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/riddleschool/riddletransfer/" onclick="openURLFromButton(this)">Riddle Transfer</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/riddleschool/riddletransfer2/" onclick="openURLFromButton(this)">Riddle Transfer   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/driftboss/" onclick="openURLFromButton(this)">Drift Boss</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/fnf/" onclick="openURLFromButton(this)">Fnf</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pacman/" onclick="openURLFromButton(this)">Pacman</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papaspancakeria/" onclick="openURLFromButton(this)">Papaspancakeria</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papaspancakeria/" onclick="openURLFromButton(this)">Papas Pancakeria</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/rooftop/" onclick="openURLFromButton(this)">Rooftop</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/baldisbasics/" onclick="openURLFromButton(this)">Baldisbasics</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/bobtherobber2/" onclick="openURLFromButton(this)">Bobtherobber2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/bobtherobber2/" onclick="openURLFromButton(this)">Bobtherobber   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/minesweeper/" onclick="openURLFromButton(this)">Minesweeper</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pokemonemerald/" onclick="openURLFromButton(this)">Pokemonemerald</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pokemonfirered/" onclick="openURLFromButton(this)">Pokemonfirered</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermariobros/" onclick="openURLFromButton(this)">Supermariobros</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermariokart/" onclick="openURLFromButton(this)">Supermariokart</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermarioworld/" onclick="openURLFromButton(this)">Supermarioworld</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pokemonemerald/" onclick="openURLFromButton(this)">Pokemon Emerald</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pokemonfirered/" onclick="openURLFromButton(this)">Pokemon Fire Red</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermariobros/" onclick="openURLFromButton(this)">Super Mario Bros</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermariokart/" onclick="openURLFromButton(this)">Super Mario Kart</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermarioworld/" onclick="openURLFromButton(this)">Super Mario World</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/thereisnogame/" onclick="openURLFromButton(this)">Thereisnogame</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/worldshardestgame/" onclick="openURLFromButton(this)">Worldshardestgame</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/worldshardestgame/" onclick="openURLFromButton(this)">World Shardestgame</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/castlevania/" onclick="openURLFromButton(this)">Castlevania</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/donkeykong/" onclick="openURLFromButton(this)">Donkeykong</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/donkeykong/" onclick="openURLFromButton(this)">Donkey Kong</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/drmario/" onclick="openURLFromButton(this)">Drmario</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/metroid/" onclick="openURLFromButton(this)">Metroid</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermariobros2/" onclick="openURLFromButton(this)">Supermariobros2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermariobros3/" onclick="openURLFromButton(this)">Supermariobros3</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermariobros2/" onclick="openURLFromButton(this)">Super Mario Bros   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermariobros3/" onclick="openURLFromButton(this)">Super Mario Bros   3</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/thelegendofzelda/" onclick="openURLFromButton(this)">Thelegendofzelda</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/warioware/" onclick="openURLFromButton(this)">Warioware</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/yoshisisland/" onclick="openURLFromButton(this)">Yoshisisland</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/donkeykongland/" onclick="openURLFromButton(this)">Donkeykongland</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/kirbysdreamland/" onclick="openURLFromButton(this)">Kirbysdreamland</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermarioland/" onclick="openURLFromButton(this)">Supermarioland</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/donkeykongland/" onclick="openURLFromButton(this)">Donkey Kong Land</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/kirbysdreamland/" onclick="openURLFromButton(this)">Kirby Sdreamland</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermarioland/" onclick="openURLFromButton(this)">Super Mario Land</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/dogeminer/" onclick="openURLFromButton(this)">Dogeminer</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/tanukisunset/" onclick="openURLFromButton(this)">Tanukisunset</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/aquaparkslides/" onclick="openURLFromButton(this)">Aquaparkslides</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/colorswitch/" onclick="openURLFromButton(this)">Colorswitch</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papasfreezeria/" onclick="openURLFromButton(this)">Papasfreezeria</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papasfreezeria/" onclick="openURLFromButton(this)">Papas Freezeria</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/btd/btd/" onclick="openURLFromButton(this)">Btd</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/btd/btd2/" onclick="openURLFromButton(this)">Btd2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/btd/btd3/" onclick="openURLFromButton(this)">Btd3</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/btd/btd4/" onclick="openURLFromButton(this)">Btd4</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/btd/btd2/" onclick="openURLFromButton(this)">Btd   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/btd/btd3/" onclick="openURLFromButton(this)">Btd   3</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/btd/btd4/" onclick="openURLFromButton(this)">Btd   4</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/bomberman/" onclick="openURLFromButton(this)">Bomberman</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/fireemblem/" onclick="openURLFromButton(this)">Fireemblem</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/fireemblem/" onclick="openURLFromButton(this)">Fire Emblem</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/iceclimber/" onclick="openURLFromButton(this)">Iceclimber</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mariokartsupercircuit/" onclick="openURLFromButton(this)">Mariokartsupercircuit</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pokemonleafgreen/" onclick="openURLFromButton(this)">Pokemonleafgreen</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pokemonruby/" onclick="openURLFromButton(this)">Pokemonruby</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pokemonsapphire/" onclick="openURLFromButton(this)">Pokemonsapphire</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/superstarsaga/" onclick="openURLFromButton(this)">Superstarsaga</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mariokartsupercircuit/" onclick="openURLFromButton(this)">Mario Kart Super Circuit</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pokemonleafgreen/" onclick="openURLFromButton(this)">Pokemon Leaf Green</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pokemonruby/" onclick="openURLFromButton(this)">Pokemon Ruby</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pokemonsapphire/" onclick="openURLFromButton(this)">Pokemon Sapphire</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/superstarsaga/" onclick="openURLFromButton(this)">Super Starsaga</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/adofai/" onclick="openURLFromButton(this)">Adofai</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supersmashflash/" onclick="openURLFromButton(this)">Supersmashflash</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermeatboy/" onclick="openURLFromButton(this)">Supermeatboy</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supersmashflash/" onclick="openURLFromButton(this)">Super Sm Ashflash</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermeatboy/" onclick="openURLFromButton(this)">Super Meatboy</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/stickmanhook/" onclick="openURLFromButton(this)">Stickmanhook</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/defendthetank/" onclick="openURLFromButton(this)">Defendthetank</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/sortthecourt/" onclick="openURLFromButton(this)">Sortthecourt</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/thisistheonlylevel/" onclick="openURLFromButton(this)">Thisistheonlylevel</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/run/" onclick="openURLFromButton(this)">Run</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/run2/" onclick="openURLFromButton(this)">Run2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/run2/" onclick="openURLFromButton(this)">Run   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/battleships/" onclick="openURLFromButton(this)">Battleships</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/breakingthebank/" onclick="openURLFromButton(this)">Breakingthebank</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/ducklife/" onclick="openURLFromButton(this)">Ducklife</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/ducklife2/" onclick="openURLFromButton(this)">Ducklife2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/ducklife3/" onclick="openURLFromButton(this)">Ducklife3</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/ducklife/" onclick="openURLFromButton(this)">Duck Life</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/ducklife2/" onclick="openURLFromButton(this)">Duck Life   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/ducklife3/" onclick="openURLFromButton(this)">Duck Life   3</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/linerider/" onclick="openURLFromButton(this)">Linerider</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mariocombat/" onclick="openURLFromButton(this)">Mariocombat</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/raftwars2/" onclick="openURLFromButton(this)">Raftwars2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mariocombat/" onclick="openURLFromButton(this)">Mario Combat</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/raftwars2/" onclick="openURLFromButton(this)">Raftwars   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/spaceinvaders/" onclick="openURLFromButton(this)">Spaceinvaders</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/animalcrossingwildworld/" onclick="openURLFromButton(this)">Animalcrossingwildworld</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mariokartds/" onclick="openURLFromButton(this)">Mariokartds</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mariokartds/" onclick="openURLFromButton(this)">Mario Kart Ds</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/newsupermariobros/" onclick="openURLFromButton(this)">Newsupermariobros</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/nintendogs/" onclick="openURLFromButton(this)">Nintendogs</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/sm64ds/" onclick="openURLFromButton(this)">Sm64Ds</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/sm64ds/" onclick="openURLFromButton(this)">Sm   6 4  Ds</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/gunmayhem/" onclick="openURLFromButton(this)">Gunmayhem</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/learntofly/" onclick="openURLFromButton(this)">Learntofly</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/rooftop2/" onclick="openURLFromButton(this)">Rooftop2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/fireboywatergirl/" onclick="openURLFromButton(this)">Fireboywatergirl</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/rooftop2/" onclick="openURLFromButton(this)">Rooftop   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/fireboywatergirl/" onclick="openURLFromButton(this)">Fire Boywatergirl</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/chibiknight/" onclick="openURLFromButton(this)">Chibiknight</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/clusterrush/" onclick="openURLFromButton(this)">Clusterrush</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/doodledefender/" onclick="openURLFromButton(this)">Doodledefender</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/learntofly2/" onclick="openURLFromButton(this)">Learntofly2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papasscooperia/" onclick="openURLFromButton(this)">Papasscooperia</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papassushiria/" onclick="openURLFromButton(this)">Papassushiria</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papaswingeria/" onclick="openURLFromButton(this)">Papaswingeria</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/learntofly2/" onclick="openURLFromButton(this)">Learntofly   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papasscooperia/" onclick="openURLFromButton(this)">Papas Scooperia</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papassushiria/" onclick="openURLFromButton(this)">Papas Sushiria</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papaswingeria/" onclick="openURLFromButton(this)">Papas Wingeria</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/raftwars/" onclick="openURLFromButton(this)">Raftwars</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/unfairmario/" onclick="openURLFromButton(this)">Unfairmario</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/boxingphysics2/" onclick="openURLFromButton(this)">Boxingphysics2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/boxingphysics2/" onclick="openURLFromButton(this)">Boxingphysics   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/aceattorney/" onclick="openURLFromButton(this)">Aceattorney</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/metalgearsolid/" onclick="openURLFromButton(this)">Metalgearsolid</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mother3/" onclick="openURLFromButton(this)">Mother3</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pokemondiamond/" onclick="openURLFromButton(this)">Pokemondiamond</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pokemonplatinum/" onclick="openURLFromButton(this)">Pokemonplatinum</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pokemonsoulsilver/" onclick="openURLFromButton(this)">Pokemonsoulsilver</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/advancewars/" onclick="openURLFromButton(this)">Advancewars</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/metalgearsolid/" onclick="openURLFromButton(this)">Metal Gear Solid</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mother3/" onclick="openURLFromButton(this)">Mother   3</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pokemondiamond/" onclick="openURLFromButton(this)">Pokemon Diamond</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pokemonplatinum/" onclick="openURLFromButton(this)">Pokemon Platinum</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pokemonsoulsilver/" onclick="openURLFromButton(this)">Pokemon Soulsilver</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/advancewars/" onclick="openURLFromButton(this)">Advance Wars</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/banjopilot/" onclick="openURLFromButton(this)">Banjopilot</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermonkeyballjr/" onclick="openURLFromButton(this)">Supermonkeyballjr</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/theimpossiblequiz2/" onclick="openURLFromButton(this)">Theimpossiblequiz2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papasdonuteria/" onclick="openURLFromButton(this)">Papasdonuteria</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/fancypantsadventure2/" onclick="openURLFromButton(this)">Fancypantsadventure2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermonkeyballjr/" onclick="openURLFromButton(this)">Super Monkeyballjr</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/theimpossiblequiz2/" onclick="openURLFromButton(this)">Theimpossiblequiz   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papasdonuteria/" onclick="openURLFromButton(this)">Papas Donuteria</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/fancypantsadventure2/" onclick="openURLFromButton(this)">Fancypantsadventure   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/tinyfishing/" onclick="openURLFromButton(this)">Tinyfishing</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/bigredbutton/" onclick="openURLFromButton(this)">Bigredbutton</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/achievementunlocked/" onclick="openURLFromButton(this)">Achievementunlocked</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/kirbymassattack/" onclick="openURLFromButton(this)">Kirbymassattack</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/sonicadvance/" onclick="openURLFromButton(this)">Sonicadvance</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/kirbymassattack/" onclick="openURLFromButton(this)">Kirby Massattack</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/sonicadvance/" onclick="openURLFromButton(this)">Sonic Advance</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/wormsworldparty/" onclick="openURLFromButton(this)">Wormsworldparty</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/badicecream/" onclick="openURLFromButton(this)">Badicecream</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/badicecream2/" onclick="openURLFromButton(this)">Badicecream2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/badicecream3/" onclick="openURLFromButton(this)">Badicecream3</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/badicecream2/" onclick="openURLFromButton(this)">Badicecream   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/badicecream3/" onclick="openURLFromButton(this)">Badicecream   3</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/adventurecapitalist/" onclick="openURLFromButton(this)">Adventurecapitalist</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/monkeymart/" onclick="openURLFromButton(this)">Monkeymart</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/doom64/" onclick="openURLFromButton(this)">Doom64</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/doom64/" onclick="openURLFromButton(this)">Doom   6 4</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/banjokazooie/" onclick="openURLFromButton(this)">Banjokazooie</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/donkeykong64/" onclick="openURLFromButton(this)">Donkeykong64</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/donkeykong64/" onclick="openURLFromButton(this)">Donkey Kong   6 4</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/fzerox/" onclick="openURLFromButton(this)">Fzerox</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/kirby64/" onclick="openURLFromButton(this)">Kirby64</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mariokart64/" onclick="openURLFromButton(this)">Mariokart64</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/marioparty/" onclick="openURLFromButton(this)">Marioparty</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/marioparty2/" onclick="openURLFromButton(this)">Marioparty2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/kirby64/" onclick="openURLFromButton(this)">Kirby   6 4</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mariokart64/" onclick="openURLFromButton(this)">Mario Kart   6 4</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/marioparty/" onclick="openURLFromButton(this)">Mario Party</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/marioparty2/" onclick="openURLFromButton(this)">Mario Party   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/ocarinaoftime/" onclick="openURLFromButton(this)">Ocarinaoftime</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/starfox64/" onclick="openURLFromButton(this)">Starfox64</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supersmashbros/" onclick="openURLFromButton(this)">Supersmashbros</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/streetfighter2/" onclick="openURLFromButton(this)">Streetfighter2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/starfox64/" onclick="openURLFromButton(this)">Starfox   6 4</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supersmashbros/" onclick="openURLFromButton(this)">Super Sm Ashbros</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/streetfighter2/" onclick="openURLFromButton(this)">Streetfighter   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/getawayshootout/" onclick="openURLFromButton(this)">Getawayshootout</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/rabbitsamurai/" onclick="openURLFromButton(this)">Rabbitsamurai</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mariopartyds/" onclick="openURLFromButton(this)">Mariopartyds</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mariopartyds/" onclick="openURLFromButton(this)">Mario Partyds</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/professorlayton/" onclick="openURLFromButton(this)">Professorlayton</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/scribblenauts/" onclick="openURLFromButton(this)">Scribblenauts</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/advancewars2/" onclick="openURLFromButton(this)">Advancewars2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/advancewars2/" onclick="openURLFromButton(this)">Advance Wars   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/harvestmoon/" onclick="openURLFromButton(this)">Harvestmoon</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mariotennis/" onclick="openURLFromButton(this)">Mariotennis</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mariotennis/" onclick="openURLFromButton(this)">Mario Tennis</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/megamanzero/" onclick="openURLFromButton(this)">Megamanzero</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pokemonmysterydungeon/" onclick="openURLFromButton(this)">Pokemonmysterydungeon</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pokemonunbound/" onclick="openURLFromButton(this)">Pokemonunbound</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papascheeseria/" onclick="openURLFromButton(this)">Papascheeseria</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papascupcakeria/" onclick="openURLFromButton(this)">Papascupcakeria</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papasbakeria/" onclick="openURLFromButton(this)">Papasbakeria</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papaspastaria/" onclick="openURLFromButton(this)">Papaspastaria</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/gunmayhem2/" onclick="openURLFromButton(this)">Gunmayhem2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pokemonmysterydungeon/" onclick="openURLFromButton(this)">Pokemon Mysterydungeon</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pokemonunbound/" onclick="openURLFromButton(this)">Pokemon Unbound</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papascheeseria/" onclick="openURLFromButton(this)">Papas Cheeseria</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papascupcakeria/" onclick="openURLFromButton(this)">Papas Cupcakeria</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papasbakeria/" onclick="openURLFromButton(this)">Papas Bakeria</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papaspastaria/" onclick="openURLFromButton(this)">Papas Pastaria</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/gunmayhem2/" onclick="openURLFromButton(this)">Gunmayhem   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/gunmayhemredux/" onclick="openURLFromButton(this)">Gunmayhemredux</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/achievementunlocked2/" onclick="openURLFromButton(this)">Achievementunlocked2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/achievementunlocked3/" onclick="openURLFromButton(this)">Achievementunlocked3</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/achievementunlocked2/" onclick="openURLFromButton(this)">Achievementunlocked   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/achievementunlocked3/" onclick="openURLFromButton(this)">Achievementunlocked   3</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/factoryballs/" onclick="openURLFromButton(this)">Factoryballs</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/skywire/" onclick="openURLFromButton(this)">Skywire</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermarioflash/" onclick="openURLFromButton(this)">Supermarioflash</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermarioflash/" onclick="openURLFromButton(this)">Super Mario Flash</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/goldensun/" onclick="openURLFromButton(this)">Goldensun</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/metroidfusion/" onclick="openURLFromButton(this)">Metroidfusion</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/dbzsupersonicwarriors/" onclick="openURLFromButton(this)">Dbzsupersonicwarriors</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/warioland4/" onclick="openURLFromButton(this)">Warioland4</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/ducklife5/" onclick="openURLFromButton(this)">Ducklife5</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/learntofly3/" onclick="openURLFromButton(this)">Learntofly3</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/warioland4/" onclick="openURLFromButton(this)">Warioland   4</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/ducklife5/" onclick="openURLFromButton(this)">Duck Life   5</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/learntofly3/" onclick="openURLFromButton(this)">Learntofly   3</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/bloxors/" onclick="openURLFromButton(this)">Bloxors</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/electricman2/" onclick="openURLFromButton(this)">Electricman2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/electricman2/" onclick="openURLFromButton(this)">Electricman   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/portal/" onclick="openURLFromButton(this)">Portal</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/portal2/" onclick="openURLFromButton(this)">Portal2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/skywire2/" onclick="openURLFromButton(this)">Skywire2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/ducklife6/" onclick="openURLFromButton(this)">Ducklife6</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/portal2/" onclick="openURLFromButton(this)">Portal   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/skywire2/" onclick="openURLFromButton(this)">Skywire   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/ducklife6/" onclick="openURLFromButton(this)">Duck Life   6</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/boxingrandom/" onclick="openURLFromButton(this)">Boxingrandom</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/cellmachine/" onclick="openURLFromButton(this)">Cellmachine</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/stickmanboost/" onclick="openURLFromButton(this)">Stickmanboost</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/vex3/" onclick="openURLFromButton(this)">Vex3</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/vex4/" onclick="openURLFromButton(this)">Vex4</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/skibidi1v100/" onclick="openURLFromButton(this)">Skibidi1V100</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/goldeneye007/" onclick="openURLFromButton(this)">Goldeneye007</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/vex3/" onclick="openURLFromButton(this)">Vex   3</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/vex4/" onclick="openURLFromButton(this)">Vex   4</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/skibidi1v100/" onclick="openURLFromButton(this)">Skibidi   1  V   1 0 0</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/goldeneye007/" onclick="openURLFromButton(this)">Goldeneye   0 0 7</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/majorasmask/" onclick="openURLFromButton(this)">Majorasmask</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papermario/" onclick="openURLFromButton(this)">Papermario</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mariogolf/" onclick="openURLFromButton(this)">Mariogolf</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pokemonstadium/" onclick="openURLFromButton(this)">Pokemonstadium</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/excitebike64/" onclick="openURLFromButton(this)">Excitebike64</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pokemonsnap/" onclick="openURLFromButton(this)">Pokemonsnap</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/marioparty3/" onclick="openURLFromButton(this)">Marioparty3</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/sonicadvance2/" onclick="openURLFromButton(this)">Sonicadvance2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mariogolf/" onclick="openURLFromButton(this)">Mario Golf</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pokemonstadium/" onclick="openURLFromButton(this)">Pokemon Stadium</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/excitebike64/" onclick="openURLFromButton(this)">Excitebike   6 4</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pokemonsnap/" onclick="openURLFromButton(this)">Pokemon Snap</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/marioparty3/" onclick="openURLFromButton(this)">Mario Party   3</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/sonicadvance2/" onclick="openURLFromButton(this)">Sonic Advance   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/bowsersinsidestory/" onclick="openURLFromButton(this)">Bowsersinsidestory</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/spirittracks/" onclick="openURLFromButton(this)">Spirittracks</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/thesims2/" onclick="openURLFromButton(this)">Thesims2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/thesims2/" onclick="openURLFromButton(this)">Thesims   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/tetrisds/" onclick="openURLFromButton(this)">Tetrisds</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/sonicrush/" onclick="openURLFromButton(this)">Sonicrush</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/thesims3/" onclick="openURLFromButton(this)">Thesims3</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/superprincesspeach/" onclick="openURLFromButton(this)">Superprincesspeach</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/sonicrush/" onclick="openURLFromButton(this)">Sonic Rush</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/thesims3/" onclick="openURLFromButton(this)">Thesims   3</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/superprincesspeach/" onclick="openURLFromButton(this)">Super Princesspeach</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/legobatman/" onclick="openURLFromButton(this)">Legobatman</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/doom2/" onclick="openURLFromButton(this)">Doom2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/doom2/" onclick="openURLFromButton(this)">Doom   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/dukenukemadvance/" onclick="openURLFromButton(this)">Dukenukemadvance</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mariopartyadvance/" onclick="openURLFromButton(this)">Mariopartyadvance</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mariopinballland/" onclick="openURLFromButton(this)">Mariopinballland</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mariopartyadvance/" onclick="openURLFromButton(this)">Mario Partyadvance</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mariopinballland/" onclick="openURLFromButton(this)">Mario Pinballland</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pacmanworld/" onclick="openURLFromButton(this)">Pacmanworld</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/rayman3/" onclick="openURLFromButton(this)">Rayman3</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/shrek2/" onclick="openURLFromButton(this)">Shrek2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/rayman3/" onclick="openURLFromButton(this)">Rayman   3</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/shrek2/" onclick="openURLFromButton(this)">Shrek   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/simcity/" onclick="openURLFromButton(this)">Simcity</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/simpsonsroadrage/" onclick="openURLFromButton(this)">Simpsonsroadrage</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/diddykongracing/" onclick="openURLFromButton(this)">Diddykongracing</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/waverace64/" onclick="openURLFromButton(this)">Waverace64</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/quest64/" onclick="openURLFromButton(this)">Quest64</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/gex64/" onclick="openURLFromButton(this)">Gex64</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/dukenukem64/" onclick="openURLFromButton(this)">Dukenukem64</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mortalkombat4/" onclick="openURLFromButton(this)">Mortalkombat4</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/waverace64/" onclick="openURLFromButton(this)">Waverace   6 4</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/quest64/" onclick="openURLFromButton(this)">Quest   6 4</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/gex64/" onclick="openURLFromButton(this)">Gex   6 4</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/dukenukem64/" onclick="openURLFromButton(this)">Dukenukem   6 4</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mortalkombat4/" onclick="openURLFromButton(this)">Mortalkombat   4</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/badpiggies/" onclick="openURLFromButton(this)">Badpiggies</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermarioflash2/" onclick="openURLFromButton(this)">Supermarioflash2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermarioflash2/" onclick="openURLFromButton(this)">Super Mario Flash   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/swordsandsandals/" onclick="openURLFromButton(this)">Swordsandsandals</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/swordsandsandals2/" onclick="openURLFromButton(this)">Swordsandsandals2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/swordsandsandals2/" onclick="openURLFromButton(this)">Swordsandsandals   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/wordle/" onclick="openURLFromButton(this)">Wordle</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/vex/" onclick="openURLFromButton(this)">Vex</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/vex2/" onclick="openURLFromButton(this)">Vex2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/vex5/" onclick="openURLFromButton(this)">Vex5</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/vex7/" onclick="openURLFromButton(this)">Vex7</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/vex2/" onclick="openURLFromButton(this)">Vex   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/vex5/" onclick="openURLFromButton(this)">Vex   5</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/vex7/" onclick="openURLFromButton(this)">Vex   7</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/stack/" onclick="openURLFromButton(this)">Stack</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/skibiditoiletattack/" onclick="openURLFromButton(this)">Skibiditoiletattack</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/motox3mpool/" onclick="openURLFromButton(this)">Motox3Mpool</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/motox3mpool/" onclick="openURLFromButton(this)">Motox   3  Mpool</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/offlineparadise/" onclick="openURLFromButton(this)">Offlineparadise</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/linktothepast/" onclick="openURLFromButton(this)">Linktothepast</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/donkeykongcountry/" onclick="openURLFromButton(this)">Donkeykongcountry</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/donkeykongcountry2/" onclick="openURLFromButton(this)">Donkeykongcountry2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/superbomberman/" onclick="openURLFromButton(this)">Superbomberman</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mariopaint/" onclick="openURLFromButton(this)">Mariopaint</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/donkeykongcountry/" onclick="openURLFromButton(this)">Donkey Kong Country</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/donkeykongcountry2/" onclick="openURLFromButton(this)">Donkey Kong Country   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/superbomberman/" onclick="openURLFromButton(this)">Super Bomberman</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mariopaint/" onclick="openURLFromButton(this)">Mario Paint</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/megamanx/" onclick="openURLFromButton(this)">Megamanx</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermariorpg/" onclick="openURLFromButton(this)">Supermariorpg</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supertennis/" onclick="openURLFromButton(this)">Supertennis</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermariorpg/" onclick="openURLFromButton(this)">Super Mario Rpg</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supertennis/" onclick="openURLFromButton(this)">Super Tennis</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/warioswoods/" onclick="openURLFromButton(this)">Warioswoods</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/worldshardestgame2/" onclick="openURLFromButton(this)">Worldshardestgame2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/bubbletanks2/" onclick="openURLFromButton(this)">Bubbletanks2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/worldshardestgame2/" onclick="openURLFromButton(this)">World Shardestgame   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/bubbletanks2/" onclick="openURLFromButton(this)">Bubbletanks   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/chooseyourweapon/" onclick="openURLFromButton(this)">Chooseyourweapon</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/chooseyourweapon2/" onclick="openURLFromButton(this)">Chooseyourweapon2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/chooseyourweapon3/" onclick="openURLFromButton(this)">Chooseyourweapon3</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/connect4/" onclick="openURLFromButton(this)">Connect4</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/chooseyourweapon2/" onclick="openURLFromButton(this)">Chooseyourweapon   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/chooseyourweapon3/" onclick="openURLFromButton(this)">Chooseyourweapon   3</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/connect4/" onclick="openURLFromButton(this)">Connect   4</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/electricbox/" onclick="openURLFromButton(this)">Electricbox</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mctowerdefence2/" onclick="openURLFromButton(this)">Mctowerdefence2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/cars2/" onclick="openURLFromButton(this)">Cars2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mctowerdefence2/" onclick="openURLFromButton(this)">Mc Towerdefence   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/cars2/" onclick="openURLFromButton(this)">Cars   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/cookingmama/" onclick="openURLFromButton(this)">Cookingmama</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/adventuretime/" onclick="openURLFromButton(this)">Adventuretime</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/garfieldgetsreal/" onclick="openURLFromButton(this)">Garfieldgetsreal</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/wariowaretouched/" onclick="openURLFromButton(this)">Wariowaretouched</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/kirbypowerpaintbrush/" onclick="openURLFromButton(this)">Kirbypowerpaintbrush</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/sonicandknuckles/" onclick="openURLFromButton(this)">Sonicandknuckles</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/kirbypowerpaintbrush/" onclick="openURLFromButton(this)">Kirby Powerpaintbrush</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/sonicandknuckles/" onclick="openURLFromButton(this)">Sonic Andknuckles</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/alteredbeast/" onclick="openURLFromButton(this)">Alteredbeast</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/sonicspinball/" onclick="openURLFromButton(this)">Sonicspinball</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/sonicthehedgehog3/" onclick="openURLFromButton(this)">Sonicthehedgehog3</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/sonicspinball/" onclick="openURLFromButton(this)">Sonic Spinball</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/sonicthehedgehog3/" onclick="openURLFromButton(this)">Sonic Thehedgehog   3</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/streetsofrage/" onclick="openURLFromButton(this)">Streetsofrage</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/goldenaxe/" onclick="openURLFromButton(this)">Goldenaxe</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/kirbyamazingmirror/" onclick="openURLFromButton(this)">Kirbyamazingmirror</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/kirbyamazingmirror/" onclick="openURLFromButton(this)">Kirby Amazingmirror</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/championisland/" onclick="openURLFromButton(this)">Championisland</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermarioconstruct/" onclick="openURLFromButton(this)">Supermarioconstruct</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/clickerheroes/" onclick="openURLFromButton(this)">Clickerheroes</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/stairrace3d/" onclick="openURLFromButton(this)">Stairrace3D</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/slope2/" onclick="openURLFromButton(this)">Slope2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/paperio3d/" onclick="openURLFromButton(this)">Paperio3D</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/motox3mspooky/" onclick="openURLFromButton(this)">Motox3Mspooky</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/motox3mwinter/" onclick="openURLFromButton(this)">Motox3Mwinter</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermarioconstruct/" onclick="openURLFromButton(this)">Super Mario Construct</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/clickerheroes/" onclick="openURLFromButton(this)">Clicker Heroes</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/stairrace3d/" onclick="openURLFromButton(this)">Stairrace   3  D</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/slope2/" onclick="openURLFromButton(this)">Slope   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/paperio3d/" onclick="openURLFromButton(this)">Paperio   3  D</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/motox3mspooky/" onclick="openURLFromButton(this)">Motox   3  Mspooky</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/motox3mwinter/" onclick="openURLFromButton(this)">Motox   3  Mwinter</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/snake/" onclick="openURLFromButton(this)">Snake</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papastacomia/" onclick="openURLFromButton(this)">Papastacomia</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papastacomia/" onclick="openURLFromButton(this)">Papas Tacomia</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/ovo/" onclick="openURLFromButton(this)">Ovo</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/knifehit/" onclick="openURLFromButton(this)">Knifehit</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/cubefield/" onclick="openURLFromButton(this)">Cubefield</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/burgerandfrights/" onclick="openURLFromButton(this)">Burgerandfrights</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/chess/" onclick="openURLFromButton(this)">Chess</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/fnfmidfight/" onclick="openURLFromButton(this)">Fnfmidfight</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/fnfmidfight/" onclick="openURLFromButton(this)">Fnf Midfight</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/thumbfighter/" onclick="openURLFromButton(this)">Thumbfighter</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/snowbattleio/" onclick="openURLFromButton(this)">Snowbattleio</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/lazyjump3d/" onclick="openURLFromButton(this)">Lazyjump3D</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/lazyjump3d/" onclick="openURLFromButton(this)">Lazyjump   3  D</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/goball/" onclick="openURLFromButton(this)">Goball</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/flippyfish/" onclick="openURLFromButton(this)">Flippyfish</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/shopempire/" onclick="openURLFromButton(this)">Shopempire</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/monsterbrawl/" onclick="openURLFromButton(this)">Monsterbrawl</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/multitask/" onclick="openURLFromButton(this)">Multitask</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/shift/" onclick="openURLFromButton(this)">Shift</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/shift2/" onclick="openURLFromButton(this)">Shift2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/shift3/" onclick="openURLFromButton(this)">Shift3</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/shift4/" onclick="openURLFromButton(this)">Shift4</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/shift2/" onclick="openURLFromButton(this)">Shift   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/shift3/" onclick="openURLFromButton(this)">Shift   3</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/shift4/" onclick="openURLFromButton(this)">Shift   4</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/monopoly/" onclick="openURLFromButton(this)">Monopoly</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/picrossds/" onclick="openURLFromButton(this)">Picrossds</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/wariowarediy/" onclick="openURLFromButton(this)">Wariowarediy</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pizzatower/" onclick="openURLFromButton(this)">Pizzatower</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/territorialio/" onclick="openURLFromButton(this)">Territorialio</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/1v1lol/" onclick="openURLFromButton(this)">1V1Lol</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/ballisticchickens/" onclick="openURLFromButton(this)">Ballisticchickens</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/1v1lol/" onclick="openURLFromButton(this)">1  V   1  Lol</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/ballisticchickens/" onclick="openURLFromButton(this)">Ball Isticchickens</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/basketbrosio/" onclick="openURLFromButton(this)">Basketbrosio</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mcclassic/" onclick="openURLFromButton(this)">Mcclassic</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/deathrun3d/" onclick="openURLFromButton(this)">Deathrun3D</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mcclassic/" onclick="openURLFromButton(this)">Mc Classic</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/deathrun3d/" onclick="openURLFromButton(this)">Deathrun   3  D</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/soccerrandom/" onclick="openURLFromButton(this)">Soccerrandom</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/sprinter/" onclick="openURLFromButton(this)">Sprinter</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/tron/" onclick="openURLFromButton(this)">Tron</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/1on1soccer/" onclick="openURLFromButton(this)">1On1Soccer</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/1on1soccer/" onclick="openURLFromButton(this)">1  On   1  Soccer</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/badtimesimulator/" onclick="openURLFromButton(this)">Badtimesimulator</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/amazingropepolice/" onclick="openURLFromButton(this)">Amazingropepolice</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/celeste/" onclick="openURLFromButton(this)">Celeste</button>
@@ -518,15 +508,15 @@
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/osumania/" onclick="openURLFromButton(this)">Osumania</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/helixjump/" onclick="openURLFromButton(this)">Helixjump</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/dadish/" onclick="openURLFromButton(this)">Dadish</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/dadish2/" onclick="openURLFromButton(this)">Dadish2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/dadish3/" onclick="openURLFromButton(this)">Dadish3</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/snowrider3d/" onclick="openURLFromButton(this)">Snowrider3D</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/dadish2/" onclick="openURLFromButton(this)">Dadish   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/dadish3/" onclick="openURLFromButton(this)">Dadish   3</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/snowrider3d/" onclick="openURLFromButton(this)">Snowrider   3  D</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/tubejumpers/" onclick="openURLFromButton(this)">Tubejumpers</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/yohoho/" onclick="openURLFromButton(this)">Yohoho</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/10minutestilldawn/" onclick="openURLFromButton(this)">10Minutestilldawn</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/10minutestilldawn/" onclick="openURLFromButton(this)">1 0  Minutestilldawn</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/volleyrandom/" onclick="openURLFromButton(this)">Volleyrandom</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/waterworks/" onclick="openURLFromButton(this)">Waterworks</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/geometryrash/" onclick="openURLFromButton(this)">Geometryrash</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/geometryrash/" onclick="openURLFromButton(this)">Geometry Rash</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/holeio/" onclick="openURLFromButton(this)">Holeio</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/sandtrix/" onclick="openURLFromButton(this)">Sandtrix</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/shapeshipper/" onclick="openURLFromButton(this)">Shapeshipper</button>
@@ -540,52 +530,52 @@
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/funnymadracing/" onclick="openURLFromButton(this)">Funnymadracing</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/gdlite/" onclick="openURLFromButton(this)">Gdlite</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/grandtheftgrotto/" onclick="openURLFromButton(this)">Grandtheftgrotto</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/driftmania/" onclick="openURLFromButton(this)">Driftmania</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/driftmania/" onclick="openURLFromButton(this)">Drift Mania</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/risehigher/" onclick="openURLFromButton(this)">Risehigher</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/burritobison/" onclick="openURLFromButton(this)">Burritobison</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pool/" onclick="openURLFromButton(this)">Pool</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/redball1/" onclick="openURLFromButton(this)">Redball1</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/redball3/" onclick="openURLFromButton(this)">Redball3</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/redball4/" onclick="openURLFromButton(this)">Redball4</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/redballv2/" onclick="openURLFromButton(this)">Redballv2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/redballv3/" onclick="openURLFromButton(this)">Redballv3</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/redball1/" onclick="openURLFromButton(this)">Red Ball   1</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/redball3/" onclick="openURLFromButton(this)">Red Ball   3</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/redball4/" onclick="openURLFromButton(this)">Red Ball   4</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/redballv2/" onclick="openURLFromButton(this)">Red Ball V   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/redballv3/" onclick="openURLFromButton(this)">Red Ball V   3</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/roughdino/" onclick="openURLFromButton(this)">Roughdino</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/timeshooter1/" onclick="openURLFromButton(this)">Timeshooter1</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/timeshooter2/" onclick="openURLFromButton(this)">Timeshooter2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/timeshooter3/" onclick="openURLFromButton(this)">Timeshooter3</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/timeshooter1/" onclick="openURLFromButton(this)">Timeshooter   1</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/timeshooter2/" onclick="openURLFromButton(this)">Timeshooter   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/timeshooter3/" onclick="openURLFromButton(this)">Timeshooter   3</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/battletoads/" onclick="openURLFromButton(this)">Battletoads</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/castlevaniaiii/" onclick="openURLFromButton(this)">Castlevaniaiii</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/contra/" onclick="openURLFromButton(this)">Contra</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/ducktales/" onclick="openURLFromButton(this)">Ducktales</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/ducktales/" onclick="openURLFromButton(this)">Duck Tales</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/kidicarus/" onclick="openURLFromButton(this)">Kidicarus</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/megaman2/" onclick="openURLFromButton(this)">Megaman2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/ninjagaiden/" onclick="openURLFromButton(this)">Ninjagaiden</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/megaman2/" onclick="openURLFromButton(this)">Megaman   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/ninjagaiden/" onclick="openURLFromButton(this)">Ninja Gaiden</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/punchout/" onclick="openURLFromButton(this)">Punchout</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/chronotrigger/" onclick="openURLFromButton(this)">Chronotrigger</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/contraiii/" onclick="openURLFromButton(this)">Contraiii</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/donkeykongcountry3/" onclick="openURLFromButton(this)">Donkeykongcountry3</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/donkeykongcountry3/" onclick="openURLFromButton(this)">Donkey Kong Country   3</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/earthbound/" onclick="openURLFromButton(this)">Earthbound</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/finalfantasyvi/" onclick="openURLFromButton(this)">Finalfantasyvi</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/fzero/" onclick="openURLFromButton(this)">Fzero</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermetroid/" onclick="openURLFromButton(this)">Supermetroid</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermetroid/" onclick="openURLFromButton(this)">Super Metroid</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/banjotooie/" onclick="openURLFromButton(this)">Banjotooie</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/harvestmoon64/" onclick="openURLFromButton(this)">Harvestmoon64</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/harvestmoon64/" onclick="openURLFromButton(this)">Harvestmoon   6 4</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/jetforcegemini/" onclick="openURLFromButton(this)">Jetforcegemini</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mysticalninja/" onclick="openURLFromButton(this)">Mysticalninja</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/turokdinosaurhunter/" onclick="openURLFromButton(this)">Turokdinosaurhunter</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/yoshisstory/" onclick="openURLFromButton(this)">Yoshisstory</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/kirbysdreamland2/" onclick="openURLFromButton(this)">Kirbysdreamland2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/kirbysdreamland2/" onclick="openURLFromButton(this)">Kirby Sdreamland   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/linksawakeningdx/" onclick="openURLFromButton(this)">Linksawakeningdx</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/metroidii/" onclick="openURLFromButton(this)">Metroidii</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermarioland2/" onclick="openURLFromButton(this)">Supermarioland2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supermarioland2/" onclick="openURLFromButton(this)">Super Mario Land   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/wariolandii/" onclick="openURLFromButton(this)">Wariolandii</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/castlevaniaariaofsorrow/" onclick="openURLFromButton(this)">Castlevaniaariaofsorrow</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/finalfantasytacticsadvance/" onclick="openURLFromButton(this)">Finalfantasytacticsadvance</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/drilldozer/" onclick="openURLFromButton(this)">Drilldozer</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/advancewarsdayofruin/" onclick="openURLFromButton(this)">Advancewarsdayofruin</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/advancewarsdayofruin/" onclick="openURLFromButton(this)">Advance Warsdayofruin</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/castlevaniadawnofsorrow/" onclick="openURLFromButton(this)">Castlevaniadawnofsorrow</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/castlevaniaorderofecclesia/" onclick="openURLFromButton(this)">Castlevaniaorderofecclesia</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/marioandluigipartnersintime/" onclick="openURLFromButton(this)">Marioandluigipartnersintime</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/marioandluigipartnersintime/" onclick="openURLFromButton(this)">Mario Andluigipartnersintime</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/comixzone/" onclick="openURLFromButton(this)">Comixzone</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/eccothedolphin/" onclick="openURLFromButton(this)">Eccothedolphin</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/gunstarheroes/" onclick="openURLFromButton(this)">Gunstarheroes</button>
@@ -594,117 +584,113 @@
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/ristar/" onclick="openURLFromButton(this)">Ristar</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/shiningforce/" onclick="openURLFromButton(this)">Shiningforce</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/shinobiiii/" onclick="openURLFromButton(this)">Shinobiiii</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/sonicthehedgehog/" onclick="openURLFromButton(this)">Sonicthehedgehog</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/sonicthehedgehog2/" onclick="openURLFromButton(this)">Sonicthehedgehog2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/streetsofrage2/" onclick="openURLFromButton(this)">Streetsofrage2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/sonicthehedgehog/" onclick="openURLFromButton(this)">Sonic Thehedgehog</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/sonicthehedgehog2/" onclick="openURLFromButton(this)">Sonic Thehedgehog   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/streetsofrage2/" onclick="openURLFromButton(this)">Streetsofrage   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/vectorman/" onclick="openURLFromButton(this)">Vectorman</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/vectorman2/" onclick="openURLFromButton(this)">Vectorman2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/vectorman2/" onclick="openURLFromButton(this)">Vectorman   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/illusionofgaia/" onclick="openURLFromButton(this)">Illusionofgaia</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pokemonyellow/" onclick="openURLFromButton(this)">Pokemonyellow</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pokemonyellow/" onclick="openURLFromButton(this)">Pokemon Yellow</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/abudathealien/" onclick="openURLFromButton(this)">Abudathealien</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/battlebeavers/" onclick="openURLFromButton(this)">Battlebeavers</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/controlcraft2/" onclick="openURLFromButton(this)">Controlcraft2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/controlcraft2/" onclick="openURLFromButton(this)">Controlcraft   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/ageofwar/" onclick="openURLFromButton(this)">Ageofwar</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/ageofwar2/" onclick="openURLFromButton(this)">Ageofwar2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/ageofwar2/" onclick="openURLFromButton(this)">Ageofwar   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/amorphous/" onclick="openURLFromButton(this)">Amorphous</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/bubblespinner/" onclick="openURLFromButton(this)">Bubblespinner</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/crushthecastle/" onclick="openURLFromButton(this)">Crushthecastle</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/crushthecastle2/" onclick="openURLFromButton(this)">Crushthecastle2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/crushthecastle/" onclick="openURLFromButton(this)">Crush Thecastle</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/crushthecastle2/" onclick="openURLFromButton(this)">Crush Thecastle   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/epicbattlefantasy/" onclick="openURLFromButton(this)">Epicbattlefantasy</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/epicbattlefantasy2/" onclick="openURLFromButton(this)">Epicbattlefantasy2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/epicbattlefantasy3/" onclick="openURLFromButton(this)">Epicbattlefantasy3</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/fancypantsadventure3/" onclick="openURLFromButton(this)">Fancypantsadventure3</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/floodrunner2/" onclick="openURLFromButton(this)">Floodrunner2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/floodrunner3/" onclick="openURLFromButton(this)">Floodrunner3</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/dragonboy2/" onclick="openURLFromButton(this)">Dragonboy2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/epicbattlefantasy2/" onclick="openURLFromButton(this)">Epicbattlefantasy   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/epicbattlefantasy3/" onclick="openURLFromButton(this)">Epicbattlefantasy   3</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/fancypantsadventure3/" onclick="openURLFromButton(this)">Fancypantsadventure   3</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/floodrunner2/" onclick="openURLFromButton(this)">Floodrunner   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/floodrunner3/" onclick="openURLFromButton(this)">Floodrunner   3</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/dragonboy2/" onclick="openURLFromButton(this)">Dragonboy   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/neonrider/" onclick="openURLFromButton(this)">Neonrider</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pandemic2/" onclick="openURLFromButton(this)">Pandemic2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pandemic2/" onclick="openURLFromButton(this)">Pandemic   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/stickwar/" onclick="openURLFromButton(this)">Stickwar</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/stickwar2/" onclick="openURLFromButton(this)">Stickwar2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/stickwar2/" onclick="openURLFromButton(this)">Stickwar   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/ultimateflashsonic/" onclick="openURLFromButton(this)">Ultimateflashsonic</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/zombocalypse/" onclick="openURLFromButton(this)">Zombocalypse</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/zombotron/" onclick="openURLFromButton(this)">Zombotron</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/zombotron2/" onclick="openURLFromButton(this)">Zombotron2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/backrooms2d/" onclick="openURLFromButton(this)">Backrooms2D</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/zombotron2/" onclick="openURLFromButton(this)">Zombotron   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/backrooms2d/" onclick="openURLFromButton(this)">Backrooms   2  D</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/basketrandom/" onclick="openURLFromButton(this)">Basketrandom</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/csgoclicker/" onclick="openURLFromButton(this)">Csgoclicker</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/doom/" onclick="openURLFromButton(this)">Doom</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/funnyshooter2/" onclick="openURLFromButton(this)">Funnyshooter2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/funnyshooter2/" onclick="openURLFromButton(this)">Funnyshooter   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/gunfest/" onclick="openURLFromButton(this)">Gunfest</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/infinitecraft/" onclick="openURLFromButton(this)">Infinitecraft</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/lowsadventures2/" onclick="openURLFromButton(this)">Lowsadventures2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/lowsadventures2/" onclick="openURLFromButton(this)">Lowsadventures   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pakohighway/" onclick="openURLFromButton(this)">Pakohighway</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/recoil/" onclick="openURLFromButton(this)">Recoil</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/run3plus/" onclick="openURLFromButton(this)">Run3Plus</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/run3plus/" onclick="openURLFromButton(this)">Run   3  Plus</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/slopecity/" onclick="openURLFromButton(this)">Slopecity</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/stateio/" onclick="openURLFromButton(this)">Stateio</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/sudoku/" onclick="openURLFromButton(this)">Sudoku</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/superherodrop/" onclick="openURLFromButton(this)">Superherodrop</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/balloonrun/" onclick="openURLFromButton(this)">Balloonrun</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/crazytunnel3d/" onclick="openURLFromButton(this)">Crazytunnel3D</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/eagler1.8/" onclick="openURLFromButton(this)">Eagler1.8</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/geometrydashsky/" onclick="openURLFromButton(this)">Geometrydashsky</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/superherodrop/" onclick="openURLFromButton(this)">Super Herodrop</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/balloonrun/" onclick="openURLFromButton(this)">Ball Oonrun</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/crazytunnel3d/" onclick="openURLFromButton(this)">Crazytunnel   3  D</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/eagler1.8/" onclick="openURLFromButton(this)">Eagler   1 . 8</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/geometrydashsky/" onclick="openURLFromButton(this)">Geometry Dash Sky</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/wubzzysamazingadventure/" onclick="openURLFromButton(this)">Wubzzysamazingadventure</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/golddiggerfrvr/" onclick="openURLFromButton(this)">Golddiggerfrvr</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/hexgl/" onclick="openURLFromButton(this)">Hexgl</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/houseofhazards/" onclick="openURLFromButton(this)">Houseofhazards</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/pickcrafter/" onclick="openURLFromButton(this)">Pickcrafter</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/precisionclient/" onclick="openURLFromButton(this)">Precisionclient</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/subwayrunner/" onclick="openURLFromButton(this)">Subwayrunner</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/xx142-b2.exe/" onclick="openURLFromButton(this)">Xx142 B2.Exe</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/subwayrunner/" onclick="openURLFromButton(this)">Subway Run Ner</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/xx142-b2.exe/" onclick="openURLFromButton(this)">Xx   1 4 2  B   2 .Exe</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/canopy/" onclick="openURLFromButton(this)">Canopy</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/cavechaos/" onclick="openURLFromButton(this)">Cavechaos</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/changetype/" onclick="openURLFromButton(this)">Changetype</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/cheesedreams/" onclick="openURLFromButton(this)">Cheesedreams</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/chisel/" onclick="openURLFromButton(this)">Chisel</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/chisel2/" onclick="openURLFromButton(this)">Chisel2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/chisel2/" onclick="openURLFromButton(this)">Chisel   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/ditto/" onclick="openURLFromButton(this)">Ditto</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/feedme/" onclick="openURLFromButton(this)">Feedme</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/finalninja/" onclick="openURLFromButton(this)">Finalninja</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/frostbite/" onclick="openURLFromButton(this)">Frostbite</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/frostbite2/" onclick="openURLFromButton(this)">Frostbite2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/frostbite2/" onclick="openURLFromButton(this)">Frostbite   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/icebreaker/" onclick="openURLFromButton(this)">Icebreaker</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/mutiny/" onclick="openURLFromButton(this)">Mutiny</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/nitromemustdie/" onclick="openURLFromButton(this)">Nitromemustdie</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/oodlegobs/" onclick="openURLFromButton(this)">Oodlegobs</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supertreadmill/" onclick="openURLFromButton(this)">Supertreadmill</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/supertreadmill/" onclick="openURLFromButton(this)">Super Treadmill</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/swindler/" onclick="openURLFromButton(this)">Swindler</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/testsubjectarena/" onclick="openURLFromButton(this)">Testsubjectarena</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/testsubjectcomplete/" onclick="openURLFromButton(this)">Testsubjectcomplete</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/twinshot/" onclick="openURLFromButton(this)">Twinshot</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/twinshot2/" onclick="openURLFromButton(this)">Twinshot2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/3line/" onclick="openURLFromButton(this)">3Line</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/twinshot2/" onclick="openURLFromButton(this)">Twinshot   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/3line/" onclick="openURLFromButton(this)">3  Line</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/bikechamp/" onclick="openURLFromButton(this)">Bikechamp</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/bikechamp2/" onclick="openURLFromButton(this)">Bikechamp2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/bikechamp2/" onclick="openURLFromButton(this)">Bikechamp   2</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/corporationinc/" onclick="openURLFromButton(this)">Corporationinc</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/shopempirefable/" onclick="openURLFromButton(this)">Shopempirefable</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/cactusmccoy/" onclick="openURLFromButton(this)">Cactusmccoy</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/cactusmccoy2/" onclick="openURLFromButton(this)">Cactusmccoy2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papalouie/" onclick="openURLFromButton(this)">Papalouie</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papalouie2/" onclick="openURLFromButton(this)">Papalouie2</button>
-<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papalouie3/" onclick="openURLFromButton(this)">Papalouie3</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/cactusmccoy2/" onclick="openURLFromButton(this)">Cactusmccoy   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papalouie/" onclick="openURLFromButton(this)">Papa Louie</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papalouie2/" onclick="openURLFromButton(this)">Papa Louie   2</button>
+<button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/papalouie3/" onclick="openURLFromButton(this)">Papa Louie   3</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/steakandjake/" onclick="openURLFromButton(this)">Steakandjake</button>
 <button class="url-button" data-url="https://chmbrs-wants-2-free-jaydes.netlify.app/games/steakandjakemidnightmarch/" onclick="openURLFromButton(this)">Steakandjakemidnightmarch</button>
 <div style="text-align: center; margin-top: 40px;">
-    <h2 class="section-header">Tools</h2>
-    <div class="separator"></div>
-    <button class="url-button" data-url="https://extprint3r.github.io/printer.html" onclick="openURLFromButton(this)">ExtPrint3r</button>
-    <button class="https://www.symbaloo.com/search?q" onclick="openURLFromButton(this)">Symbaloo</button>
-    <button class="url-button" data-url="data:text/html;base64,PCFkb2N0eXBlIGh0bWw+PGh0bWwgbGFuZz1lbj48dGl0bGU+RGV4dGVuc2lmeTwvdGl0bGU+PG1ldGEgY2hhcnNldD11dGYtOD48bWV0YSBjb250ZW50PXdpZHRoPWRldmljZS13aWR0aCBuYW1lPXZpZXdwb3J0PjxzdHlsZT4qe2ZvbnQtZmFtaWx5OlNhbnMtc2VyaWY7Y29sb3I6I2Q0ZDNkYX1he2NvbG9yOiM2ZGFlYmR9YTpob3ZlciB7Y29sb3I6IzRmOWViMH1jb2RlLHByZXtmb250LWZhbWlseTptb25vc3BhY2U7YmFja2dyb3VuZC1jb2xvcjojMWUyMzI0O3BhZGRpbmc6NHB4O292ZXJmbG93LXg6YXV0b31wcmV7cGFkZGluZzo4cHh9cHJlIGNvZGV7YmFja2dyb3VuZC1jb2xvcjp0cmFuc3BhcmVudDtib3JkZXI6bm9uZTtwYWRkaW5nOjB9Ym9keXtiYWNrZ3JvdW5kLWNvbG9yOiMxZTIzMjQ7d2lkdGg6MTAwJTtoZWlnaHQ6MTAwJTttYXJnaW46MH1idXR0b257YmFja2dyb3VuZC1jb2xvcjojMzM2MjZjO3BhZGRpbmc6NnB4O3BhZGRpbmctbGVmdDo4cHg7cGFkZGluZy1yaWdodDo4cHg7Ym9yZGVyOnRyYW5zcGFyZW50O2ZvbnQtc2l6ZToxNXB4fSNtYWluX2RpdnttYXgtd2lkdGg6ODAwcHg7b2JqZWN0LWZpdDpjb250YWluO2JhY2tncm91bmQtY29sb3I6IzI1MmIyZDtwYWRkaW5nOjRweDtwYWRkaW5nLWxlZnQ6MTZweDtwYWRkaW5nLXJpZ2h0OjE2cHg7bWFyZ2luOjE2cHg7bWFyZ2luLWxlZnQ6YXV0bzttYXJnaW4tcmlnaHQ6YXV0b30jYnV0dG9uc19jb250YWluZXJ7ZGlzcGxheTpmbGV4O2ZsZXgtd3JhcDp3cmFwO2dhcDo4cHh9PC9zdHlsZT48c2NyaXB0PmxldCBmcm9tX2lkPWE9PmRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGEpO2xldCBleHRlbnNpb25zPXsic2VjdXJseV9uZXciOntuYW1lOiJTZWN1cmx5Iix1cmw6ImNocm9tZS1leHRlbnNpb246Ly9qb2ZsbWtjY2lia29vcGxhZW9pbmVjamJtZGViZ2xhYi9mb250cy9NZXRyb3BvbGlzLmNzcyJ9LCJzZWN1cmx5X29sZCI6e25hbWU6IlNlY3VybHkgKG9sZCkiLHVybDoiY2hyb21lLWV4dGVuc2lvbjovL2loZW9iYWdqa2ZrbG5saWtnaWhhbmxoY2Rkam9paGtnL2ZvbnRzL01ldHJvcG9saXMuY3NzIn0sImdvZ3VhcmRpYW4iOntuYW1lOiJHb2d1YXJkaWFuIix1cmw6ImNocm9tZS1leHRlbnNpb246Ly9oYWxkbGdsZHBsZ25nZ2tqYWFmaGVsZ2lhZ2xhZmFuaC95b3V0dWJlX2luamVjdGlvbi5qcyJ9LCJsYW5zY2hvb2wiOntuYW1lOiJMQU5TY2hvb2wiLHVybDoiY2hyb21lLWV4dGVuc2lvbjovL2JhbGVpb2puanBnZW9qb2hoaGZiaWNoY29kZ2xqbW5qL2Jsb2NrZWQuaHRtbCJ9LCJsaW5ld2l6ZSI6e25hbWU6IkxpbmV3aXplIix1cmw6ImNocm9tZS1leHRlbnNpb246Ly9kZGZia2hwbWNkYmNpZWplbmZjb2xhYWllYm5qY2JmYy9iYWNrZ3JvdW5kL2Fzc2V0cy9wYWdlcy9kZWZhdWx0LWJsb2NrZWQuaHRtbCJ9LCJibG9ja3NpIjp7bmFtZToiQmxvY2tzaSIsdXJsOiJjaHJvbWUtZXh0ZW5zaW9uOi8vZ2hscG1sZG1qamhtZGdtbmVvYWliYmVna2pqYm9uYmsvcGFnZXMvYmxvY2tQYWdlLmh0bWwifSwiZm9ydGlndWFyZCI6e25hbWU6IkZvcnRpZ3VhcmQiLHVybDoiY2hyb21lLWV4dGVuc2lvbjovL2lnYmdwZWhuYm1oZ2RnamJoa2twZWRvbW1nbWZiZWFvL3lvdXR1YmVfaW5qZWN0aW9uLmpzIn0sImNpc2NvIjp7bmFtZToiQ2lzY28gVW1icmVsbGEiLHVybDoiY2hyb21lLWV4dGVuc2lvbjovL2pjZGhtb2pmZWNqZm1iZHBjaGloYmVpbG9oZ25iZGNpL2Jsb2NrZWQuaHRtbCJ9LCJjb250ZW50a2VlcGVyIjp7bmFtZToiQ29udGVudEtlZXBlciIsdXJsOiJjaHJvbWUtZXh0ZW5zaW9uOi8vamRvZ3BoYWtvbmRmZG1jYW5wYXBmYWhrZG9tYWljZmEvaW1nL2NrYXV0aDE5eC5wbmcifSwiY29udGVudGtlZXBlcmczIjp7bmFtZToiQ0stQXV0aGVudGljYXRvciBHMyIsdXJsOiJjaHJvbWUtZXh0ZW5zaW9uOi8vb2RvYW5wbm9uaWxvZ29mZ2dhb2hoa2RrZGdiaGRsanAvaW1nL2NrYXV0aDE5eC5wbmcifSwic2VjdXJseWNsYXNzcm9vbSI6e25hbWU6IlNlY3VybHkgQ2xhc3Nyb29tIix1cmw6ImNocm9tZS1leHRlbnNpb246Ly9qZmJlY2ZtaWVnY2pkZGVuamhsYmhsaWtjYmZtbmFmZC9ub3Rmb3VuZC5odG1sIn0sImhhcGFyYSI6e25hbWU6IkhhcGFyYSIsdXJsOiJjaHJvbWUtZXh0ZW5zaW9uOi8va2JvaGFmY29wZnBpZ2tqZGltZGNkZ2VubGhrbWhibmMvYmxvY2tlZC5odG1sIn0sImlib3NzIjp7bmFtZToiaWJvc3MiLHVybDoiY2hyb21lLWV4dGVuc2lvbjovL2ttZmZlaGJpZGxhbGliZmVrbGFlZm5ja3BpZGJvZGZmL3Jlc3RyaWN0ZWQuaHRtbCJ9LCJsaWdoc3BlZWQiOntuYW1lOiJMaWdodHNwZWVkIix1cmw6ImNocm9tZS1leHRlbnNpb246Ly9hZGtjcGtwZ2hhaG1ib3BramNob2JpZWNrZW9hb2VlbS9pY29uLTEyOC5wbmcifSwiaW50ZXJjbGFzcyI6e25hbWU6IkludGVyQ0xBU1MgRmlsdGVyaW5nIFNlcnZpY2UiLHVybDoiY2hyb21lLWV4dGVuc2lvbjovL2piZGRnamdsZ2trbmVvbm5pbmVhb2hkaGFiamJnb3BpL3BhZ2VzL21lc3NhZ2UtcGFnZS5odG1sIn0sImludGVyc2FmZSI6e25hbWU6IkludGVyU2FmZSBHYXRld2F5Q29ubmVjdGlvbiBBZ2VudCIsdXJsOiJjaHJvbWUtZXh0ZW5zaW9uOi8vZWNqb2doY2NuamxvZGpsbWtnbW5ibmtkY2JuamdkZW4vcmVzb3VyY2VzL29wdGlvbnMuanMifSwiZ29waGVyX2J1ZGR5Ijp7bmFtZToiR29waGVyIEJ1ZGR5Iix1cmw6ImNocm9tZS1leHRlbnNpb246Ly9jZ2JiYmptZ2RwbmlmaWpjb25oYW1nZ2plaGxhbWNpZi9pbWFnZXMvZ29waGVyLWJ1ZGR5XzEyOHgxMjhfY29sb3IucG5nIn0sImxhbnNjaG9vbF9oZWxwZXIiOntuYW1lOiJMYW5TY2hvb2wgV2ViIEhlbHBlciIsdXJsOiJjaHJvbWUtZXh0ZW5zaW9uOi8vaG9uamNuZWZla2Zub21wYW1wY3BtY2RhZGlibWpobGsvYmxvY2tlZC5odG1sIn0sImltdGxhemFydXMiOntuYW1lOiJJTVRMYXphcnVzIix1cmw6ImNocm9tZS1leHRlbnNpb246Ly9jZ2lnb3BqYWtrZWNsaGdnY2hnbmhtcG1oZ2hjYm5hZi9tb2RlbHMvbW9kZWwuanNvbiJ9LCJpbXBlcm9fYmFja2Ryb3AiOntuYW1lOiJJbXBlcm8gQmFja2Ryb3AiLHVybDoiY2hyb21lLWV4dGVuc2lvbjovL2pqcG1qY2NwZW1sbG5tZ2lhb2phb2NnbmFrcG1mZ2pnL2xpY2Vuc2VzLmh0bWwifSwibW9iaWxlX2d1YXJkaWFuIjp7bmFtZToiTW9iaWxlIEd1YXJkaWFuIix1cmw6ImNocm9tZS1leHRlbnNpb246Ly9mZ21hZmhkb2hqa2RoZmFhY2diZ2NsbWZna2dva2dtYi9ibG9jay5odG1sIn19O2FzeW5jIGZ1bmN0aW9uIGNoZWNrX3VybChhKXtsZXQgYj1uZXcgQWJvcnRDb250cm9sbGVyKCk7bGV0IGM9c2V0VGltZW91dCgoKT0+Yi5hYm9ydCgpLDUwMCk7dHJ5e2F3YWl0IGZldGNoKGEse3NpZ25hbDpiLnNpZ25hbH0pO3JldHVybiB0cnVlfWNhdGNoKGQpe2xldCBlPWQrICIiO3JldHVybiBlLmluY2x1ZGVzKCJBYm9ydEVycm9yIil9fWFzeW5jIGZ1bmN0aW9uIGRldGVjdF9leHRlbnNpb25zKCl7bGV0IGE9W107Zm9yKGxldCBiIG9mIE9iamVjdC52YWx1ZXMoZXh0ZW5zaW9ucykpe2xldCBjPWF3YWl0IGNoZWNrX3VybChiLnVybCk7aWYoYyl7YS5wdXNoKGIpfX07cmV0dXJuIGF9YXN5bmMgZnVuY3Rpb24gbWFpbigpe2xldCBhPWF3YWl0IGRldGVjdF9leHRlbnNpb25zKCk7bGV0IGI9ZnJvbV9pZCgiYnV0dG9uc19jb250YWluZXIiKTtpZighd2luZG93LmNocm9tZSl7Yi5pbm5lckhUTUw9YDxwPjxiPkVycm9yOiBZb3UgYXJlIG5vdCBydW5uaW5nIGEgQ2hyb21pdW0tYmFzZWQgYnJvd3Nlci48L2I+PC9wPmA7cmV0dXJufWVsc2UgaWYoYS5sZW5ndGg9PT0wKXtiLmlubmVySFRNTD1gPHA+PGI+RXJyb3I6IE5vIHN1cHBvcnRlZCBleHRlbnNpb25zIGRldGVjdGVkLjwvYj48L3A+YDtiLmlubmVySFRNTCs9YDxwIHN0eWxlPSJtYXJnaW4tdG9wOiAtMTZweDsiPklmIHlvdSB3YW50IHN1cHBvcnQgZm9yIGEgc3BlY2lmaWMgZXh0ZW5zaW9uIGFkZGVkLCBwbGVhc2UgbWFrZSBhbiBpc3N1ZSBvbiB0aGUgPGEgaHJlZj0iaHR0cHM6Ly9naXRodWIuY29tL2FkaW5nMjIxMC9kZXh0ZW5zaWZ5Ij5HaXRodWIgcmVwb3NpdG9yeTwvYT4sIGFuZCBwcm92aWRlIHRoZSBleHRlbnNpb24gSUQgYW5kIG1hbmlmZXN0LjwvcD5gO3JldHVybn1lbHNle2IuaW5uZXJIVE1MPSIifTtmb3IobGV0IGMgb2YgYSl7bGV0IGQ9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgiYnV0dG9uIik7ZC5pbm5lclRleHQ9YEZyZWV6ZSAke2MubmFtZX1gO2Qub25jbGljaz0oKT0+e2J1dHRvbl9oYW5kbGVyKGMpfTtiLmFwcGVuZChkKX19ZnVuY3Rpb24gYnV0dG9uX2hhbmRsZXIoYSl7bGV0IGI9IWNvbmZpcm0oIkFmdGVyIGhpdHRpbmcgT0ssIHRoZXJlIHdpbGwgYmUgYSA1IHNlY29uZCBkZWxheSB1bnRpbCB0aGUgZXh0ZW5zaW9uIHN0YXJ0cyBiZWluZyBmcm96ZW4uIFN3aXRjaCB0byBhbm90aGVyIHRhYiBpbW1lZGlhdGVseSB0byBwcmV2ZW50IHRoZSBlbnRpcmUgZGV2aWNlIGZyb20gbG9ja2luZyB1cC4iKTtpZihiKXJldHVybjtzZXRUaW1lb3V0KCgpPT57Y3JlYXRlX2lmcmFtZXMoYSl9LDUwMDApfWZ1bmN0aW9uIGNyZWF0ZV9pZnJhbWVzKGEpe2xldCBiPVtdO2xldCBjPTU7bGV0IGQ9YS51cmw7d2hpbGUodHJ1ZSl7bGV0IGU9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgiaWZyYW1lIik7ZG9jdW1lbnQuYm9keS5hcHBlbmQoZSk7Yi5wdXNoKGUpO2ZvcihsZXQgZj0wO2Y8NTA7ZisrKXtsZXQgZz1kb2N1bWVudC5jcmVhdGVFbGVtZW50KCJpZnJhbWUiKTtnLnNyYz1kO2cuc3R5bGUud2lkdGg9Zy5zdHlsZS5oZWlnaHQ9IjFweCI7ZS5jb250ZW50RG9jdW1lbnQuYm9keS5hcHBlbmQoZyl9O3doaWxlKGIubGVuZ3RoPk1hdGgubWF4KDMsMTAtIGMpKXtiWzBdLnJlbW92ZSgpO2Iuc2hpZnQoKX07YysrfX13aW5kb3cub25sb2FkPW1haW48L3NjcmlwdD48Ym9keT48ZGl2IGlkPW1haW5fZGl2PjxoMSBzdHlsZT1tYXJnaW4tdG9wOjhweD5EZXh0ZW5zaWZ5PC9oMT48cD5EZXh0ZW5zaWZ5IGlzIGFuIGV4cGxvaXQgd2hpY2ggbGV0cyB5b3UgZGlzYWJsZSBtb3N0IGFkbWluLWluc3RhbGxlZCBDaHJvbWUgZXh0ZW5zaW9ucyBmcm9tIGFueSB3ZWJwYWdlLjxoMj5JbnN0cnVjdGlvbnM8L2gyPjxvbD48bGk+T3BlbiBjaHJvbWU6Ly9leHRlbnNpb25zIGluIGEgbmV3IHRhYi4gS2VlcCB0aGlzIHBhZ2Ugb3Blbi48bGk+R28gdG8gdGhlIHNldHRpbmdzIHBhZ2UgZm9yIHRoZSBleHRlbnNpb24geW91IHdhbnQgdG8gZGlzYWJsZS48bGk+T24gdGhlIERleHRlbnNpZnkgcGFnZSwgY2xpY2sgdGhlICJmcmVlemUgZXh0ZW5zaW9uIiBidXR0b24uIEltbWVkaWF0ZWx5IHN3aXRjaCBiYWNrIHRvIHRoZSBjaHJvbWU6Ly9leHRlbnNpb25zIHRhYi48bGk+QmFjayBvbiB0aGUgY2hyb21lOi8vZXh0ZW5zaW9ucyBwYWdlLCBzcGFtIHRoZSAiYWxsb3cgYWNjZXNzIHRvIGZpbGUgVVJMcyIgc3dpdGNoIGZvciBhIGZldyBzZWNvbmRzLjxsaT5UaGUgZXh0ZW5zaW9uIHNob3VsZCBub3cgYmUgdGVtcG9yYXJpbHkgZGlzYWJsZWQuIEZvciB0aGlzIGVmZmVjdCB0byBwZXJzaXN0LCBmbGlwIHRoZSAiYWxsb3cgYWNjZXNzIHRvIGZpbGUgVVJMcyIgYWdhaW4gZXZlcnkgZmV3IG1pbnV0ZXMsIG9yIGlmIHBhZ2VzIHN0YXJ0IGdldHRpbmcgYmxvY2tlZCBhZ2Fpbi48bGk+WW91IG1heSBhbHNvIG5lZWQgdG8gcmVvcGVuIHRoaXMgcGFnZSBldmVyeSBvbmNlIGluIGEgd2hpbGUgdG8gcHJldmVudCBhbiB1bmF2b2lkYWJsZSBtZW1vcnkgbGVhayBmcm9tIGNyYXNoaW5nIHRoZSBzeXN0ZW0uPC9vbD48cD5EdXJpbmcgdGhpcyBwcm9jZXNzLCB5b3VyIENocm9tZWJvb2sgbWF5IGhhbmcgbW9tZW50YXJpbHkuIFRoaXMgaXMgbm9ybWFsLCBhbmQgaXQgc2hvdWxkIHJlc29sdmUgaXRzZWxmIGFmdGVyIGEgZmV3IHNlY29uZHMuPGRpdiBpZD1idXR0b25zX2NvbnRhaW5lcj48cD48aT5EZXRlY3RpbmcgZXh0ZW5zaW9ucy4uLjwvaT48L2Rpdj48YnI+PGhyPjxkZXRhaWxzPjxzdW1tYXJ5IHN0eWxlPW1hcmdpbi1ib3R0b206OHB4Pk1hZGUgYnkgPGEgaHJlZj1odHRwczovL2FkaW5nLmRldiB0YXJnZXQ9X2JsYW5rPmFkaW5nMjIxMDwvYT4uIFRoaXMgZmlsZSBpcyBsaWNlbnNlZCB1bmRlciB0aGUgTUlUIGxpY2Vuc2UuPC9zdW1tYXJ5PiA8cHJlPk1JVCBMaWNlbnNlCkNvcHlyaWdodCAoYykgMjAyMyBhZGluZzIyMTAKClBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhIGNvcHkKb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUgIlNvZnR3YXJlIiksIHRvIGRlYWwKaW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0cwp0byB1c2UsIGNvcHksIG1vZGlmeSwgbWVyZ2UsIHB1Ymxpc2gsIGRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsCmNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQgcGVyc29ucyB0byB3aG9tIHRoZSBTb2Z0d2FyZSBpcwpmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOgoKVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUgaW5jbHVkZWQgaW4gYWxsCmNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuCgpUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgIkFTIElTIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUyBPUgpJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSwKRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4gSU4gTk8gRVZFTlQgU0hBTEwgVEhFCkFVVEhPUlMgT1IgQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVIKTElBQklMSVRZLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSwKT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgU09GVFdBUkUgT1IgVEhFIFVTRSBPUiBPVEhFUiBERUFMSU5HUyBJTiBUSEUKU09GVFdBUkUuPC9wcmU+IDxwIHN0eWxlPWZvbnQtc2l6ZToxM3B4O3RleHQtYWxpZ246cmlnaHQ+PGk+VmVyc2lvbiAxLjEuMTwvaT48L3A+PC9kZXRhaWxzPjwvZGl2Pg==" onclick="openURLFromButton(this)">Dexter</button>
-    <p class="paragraph">(Use this at your own risk !)</p>
+<h2 class="section-header">Tools</h2>
+<div class="separator"></div>
+<button class="url-button" data-url="https://extprint3r.github.io/printer.html" onclick="openURLFromButton(this)">Ext  Print   3  R</button>
+<button class="https://www.symbaloo.com/search?q" onclick="openURLFromButton(this)">Symbaloo</button>
+<button class="url-button" data-url="data:text/html;base64,PCFkb2N0eXBlIGh0bWw+PGh0bWwgbGFuZz1lbj48dGl0bGU+RGV4dGVuc2lmeTwvdGl0bGU+PG1ldGEgY2hhcnNldD11dGYtOD48bWV0YSBjb250ZW50PXdpZHRoPWRldmljZS13aWR0aCBuYW1lPXZpZXdwb3J0PjxzdHlsZT4qe2ZvbnQtZmFtaWx5OlNhbnMtc2VyaWY7Y29sb3I6I2Q0ZDNkYX1he2NvbG9yOiM2ZGFlYmR9YTpob3ZlciB7Y29sb3I6IzRmOWViMH1jb2RlLHByZXtmb250LWZhbWlseTptb25vc3BhY2U7YmFja2dyb3VuZC1jb2xvcjojMWUyMzI0O3BhZGRpbmc6NHB4O292ZXJmbG93LXg6YXV0b31wcmV7cGFkZGluZzo4cHh9cHJlIGNvZGV7YmFja2dyb3VuZC1jb2xvcjp0cmFuc3BhcmVudDtib3JkZXI6bm9uZTtwYWRkaW5nOjB9Ym9keXtiYWNrZ3JvdW5kLWNvbG9yOiMxZTIzMjQ7d2lkdGg6MTAwJTtoZWlnaHQ6MTAwJTttYXJnaW46MH1idXR0b257YmFja2dyb3VuZC1jb2xvcjojMzM2MjZjO3BhZGRpbmc6NnB4O3BhZGRpbmctbGVmdDo4cHg7cGFkZGluZy1yaWdodDo4cHg7Ym9yZGVyOnRyYW5zcGFyZW50O2ZvbnQtc2l6ZToxNXB4fSNtYWluX2RpdnttYXgtd2lkdGg6ODAwcHg7b2JqZWN0LWZpdDpjb250YWluO2JhY2tncm91bmQtY29sb3I6IzI1MmIyZDtwYWRkaW5nOjRweDtwYWRkaW5nLWxlZnQ6MTZweDtwYWRkaW5nLXJpZ2h0OjE2cHg7bWFyZ2luOjE2cHg7bWFyZ2luLWxlZnQ6YXV0bzttYXJnaW4tcmlnaHQ6YXV0b30jYnV0dG9uc19jb250YWluZXJ7ZGlzcGxheTpmbGV4O2ZsZXgtd3JhcDp3cmFwO2dhcDo4cHh9PC9zdHlsZT48c2NyaXB0PmxldCBmcm9tX2lkPWE9PmRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGEpO2xldCBleHRlbnNpb25zPXsic2VjdXJseV9uZXciOntuYW1lOiJTZWN1cmx5Iix1cmw6ImNocm9tZS1leHRlbnNpb246Ly9qb2ZsbWtjY2lia29vcGxhZW9pbmVjamJtZGViZ2xhYi9mb250cy9NZXRyb3BvbGlzLmNzcyJ9LCJzZWN1cmx5X29sZCI6e25hbWU6IlNlY3VybHkgKG9sZCkiLHVybDoiY2hyb21lLWV4dGVuc2lvbjovL2loZW9iYWdqa2ZrbG5saWtnaWhhbmxoY2Rkam9paGtnL2ZvbnRzL01ldHJvcG9saXMuY3NzIn0sImdvZ3VhcmRpYW4iOntuYW1lOiJHb2d1YXJkaWFuIix1cmw6ImNocm9tZS1leHRlbnNpb246Ly9oYWxkbGdsZHBsZ25nZ2tqYWFmaGVsZ2lhZ2xhZmFuaC95b3V0dWJlX2luamVjdGlvbi5qcyJ9LCJsYW5zY2hvb2wiOntuYW1lOiJMQU5TY2hvb2wiLHVybDoiY2hyb21lLWV4dGVuc2lvbjovL2JhbGVpb2puanBnZW9qb2hoaGZiaWNoY29kZ2xqbW5qL2Jsb2NrZWQuaHRtbCJ9LCJsaW5ld2l6ZSI6e25hbWU6IkxpbmV3aXplIix1cmw6ImNocm9tZS1leHRlbnNpb246Ly9kZGZia2hwbWNkYmNpZWplbmZjb2xhYWllYm5qY2JmYy9iYWNrZ3JvdW5kL2Fzc2V0cy9wYWdlcy9kZWZhdWx0LWJsb2NrZWQuaHRtbCJ9LCJibG9ja3NpIjp7bmFtZToiQmxvY2tzaSIsdXJsOiJjaHJvbWUtZXh0ZW5zaW9uOi8vZ2hscG1sZG1qamhtZGdtbmVvYWliYmVna2pqYm9uYmsvcGFnZXMvYmxvY2tQYWdlLmh0bWwifSwiZm9ydGlndWFyZCI6e25hbWU6IkZvcnRpZ3VhcmQiLHVybDoiY2hyb21lLWV4dGVuc2lvbjovL2lnYmdwZWhuYm1oZ2RnamJoa2twZWRvbW1nbWZiZWFvL3lvdXR1YmVfaW5qZWN0aW9uLmpzIn0sImNpc2NvIjp7bmFtZToiQ2lzY28gVW1icmVsbGEiLHVybDoiY2hyb21lLWV4dGVuc2lvbjovL2pjZGhtb2pmZWNqZm1iZHBjaGloYmVpbG9oZ25iZGNpL2Jsb2NrZWQuaHRtbCJ9LCJjb250ZW50a2VlcGVyIjp7bmFtZToiQ29udGVudEtlZXBlciIsdXJsOiJjaHJvbWUtZXh0ZW5zaW9uOi8vamRvZ3BoYWtvbmRmZG1jYW5wYXBmYWhrZG9tYWljZmEvaW1nL2NrYXV0aDE5eC5wbmcifSwiY29udGVudGtlZXBlcmczIjp7bmFtZToiQ0stQXV0aGVudGljYXRvciBHMyIsdXJsOiJjaHJvbWUtZXh0ZW5zaW9uOi8vb2RvYW5wbm9uaWxvZ29mZ2dhb2hoa2RrZGdiaGRsanAvaW1nL2NrYXV0aDE5eC5wbmcifSwic2VjdXJseWNsYXNzcm9vbSI6e25hbWU6IlNlY3VybHkgQ2xhc3Nyb29tIix1cmw6ImNocm9tZS1leHRlbnNpb246Ly9qZmJlY2ZtaWVnY2pkZGVuamhsYmhsaWtjYmZtbmFmZC9ub3Rmb3VuZC5odG1sIn0sImhhcGFyYSI6e25hbWU6IkhhcGFyYSIsdXJsOiJjaHJvbWUtZXh0ZW5zaW9uOi8va2JvaGFmY29wZnBpZ2tqZGltZGNkZ2VubGhrbWhibmMvYmxvY2tlZC5odG1sIn0sImlib3NzIjp7bmFtZToiaWJvc3MiLHVybDoiY2hyb21lLWV4dGVuc2lvbjovL2ttZmZlaGJpZGxhbGliZmVrbGFlZm5ja3BpZGJvZGZmL3Jlc3RyaWN0ZWQuaHRtbCJ9LCJsaWdoc3BlZWQiOntuYW1lOiJMaWdodHNwZWVkIix1cmw6ImNocm9tZS1leHRlbnNpb246Ly9hZGtjcGtwZ2hhaG1ib3BramNob2JpZWNrZW9hb2VlbS9pY29uLTEyOC5wbmcifSwiaW50ZXJjbGFzcyI6e25hbWU6IkludGVyQ0xBU1MgRmlsdGVyaW5nIFNlcnZpY2UiLHVybDoiY2hyb21lLWV4dGVuc2lvbjovL2piZGRnamdsZ2trbmVvbm5pbmVhb2hkaGFiamJnb3BpL3BhZ2VzL21lc3NhZ2UtcGFnZS5odG1sIn0sImludGVyc2FmZSI6e25hbWU6IkludGVyU2FmZSBHYXRld2F5Q29ubmVjdGlvbiBBZ2VudCIsdXJsOiJjaHJvbWUtZXh0ZW5zaW9uOi8vZWNqb2doY2NuamxvZGpsbWtnbW5ibmtkY2JuamdkZW4vcmVzb3VyY2VzL29wdGlvbnMuanMifSwiZ29waGVyX2J1ZGR5Ijp7bmFtZToiR29waGVyIEJ1ZGR5Iix1cmw6ImNocm9tZS1leHRlbnNpb246Ly9jZ2JiYmptZ2RwbmlmaWpjb25oYW1nZ2plaGxhbWNpZi9pbWFnZXMvZ29waGVyLWJ1ZGR5XzEyOHgxMjhfY29sb3IucG5nIn0sImxhbnNjaG9vbF9oZWxwZXIiOntuYW1lOiJMYW5TY2hvb2wgV2ViIEhlbHBlciIsdXJsOiJjaHJvbWUtZXh0ZW5zaW9uOi8vaG9uamNuZWZla2Zub21wYW1wY3BtY2RhZGlibWpobGsvYmxvY2tlZC5odG1sIn0sImltdGxhemFydXMiOntuYW1lOiJJTVRMYXphcnVzIix1cmw6ImNocm9tZS1leHRlbnNpb246Ly9jZ2lnb3BqYWtrZWNsaGdnY2hnbmhtcG1oZ2hjYm5hZi9tb2RlbHMvbW9kZWwuanNvbiJ9LCJpbXBlcm9fYmFja2Ryb3AiOntuYW1lOiJJbXBlcm8gQmFja2Ryb3AiLHVybDoiY2hyb21lLWV4dGVuc2lvbjovL2pqcG1qY2NwZW1sbG5tZ2lhb2phb2NnbmFrcG1mZ2pnL2xpY2Vuc2VzLmh0bWwifSwibW9iaWxlX2d1YXJkaWFuIjp7bmFtZToiTW9iaWxlIEd1YXJkaWFuIix1cmw6ImNocm9tZS1leHRlbnNpb246Ly9mZ21hZmhkb2hqa2RoZmFhY2diZ2NsbWZna2dva2dtYi9ibG9jay5odG1sIn19O2FzeW5jIGZ1bmN0aW9uIGNoZWNrX3VybChhKXtsZXQgYj1uZXcgQWJvcnRDb250cm9sbGVyKCk7bGV0IGM9c2V0VGltZW91dCgoKT0+Yi5hYm9ydCgpLDUwMCk7dHJ5e2F3YWl0IGZldGNoKGEse3NpZ25hbDpiLnNpZ25hbH0pO3JldHVybiB0cnVlfWNhdGNoKGQpe2xldCBlPWQrICIiO3JldHVybiBlLmluY2x1ZGVzKCJBYm9ydEVycm9yIil9fWFzeW5jIGZ1bmN0aW9uIGRldGVjdF9leHRlbnNpb25zKCl7bGV0IGE9W107Zm9yKGxldCBiIG9mIE9iamVjdC52YWx1ZXMoZXh0ZW5zaW9ucykpe2xldCBjPWF3YWl0IGNoZWNrX3VybChiLnVybCk7aWYoYyl7YS5wdXNoKGIpfX07cmV0dXJuIGF9YXN5bmMgZnVuY3Rpb24gbWFpbigpe2xldCBhPWF3YWl0IGRldGVjdF9leHRlbnNpb25zKCk7bGV0IGI9ZnJvbV9pZCgiYnV0dG9uc19jb250YWluZXIiKTtpZighd2luZG93LmNocm9tZSl7Yi5pbm5lckhUTUw9YDxwPjxiPkVycm9yOiBZb3UgYXJlIG5vdCBydW5uaW5nIGEgQ2hyb21pdW0tYmFzZWQgYnJvd3Nlci48L2I+PC9wPmA7cmV0dXJufWVsc2UgaWYoYS5sZW5ndGg9PT0wKXtiLmlubmVySFRNTD1gPHA+PGI+RXJyb3I6IE5vIHN1cHBvcnRlZCBleHRlbnNpb25zIGRldGVjdGVkLjwvYj48L3A+YDtiLmlubmVySFRNTCs9YDxwIHN0eWxlPSJtYXJnaW4tdG9wOiAtMTZweDsiPklmIHlvdSB3YW50IHN1cHBvcnQgZm9yIGEgc3BlY2lmaWMgZXh0ZW5zaW9uIGFkZGVkLCBwbGVhc2UgbWFrZSBhbiBpc3N1ZSBvbiB0aGUgPGEgaHJlZj0iaHR0cHM6Ly9naXRodWIuY29tL2FkaW5nMjIxMC9kZXh0ZW5zaWZ5Ij5HaXRodWIgcmVwb3NpdG9yeTwvYT4sIGFuZCBwcm92aWRlIHRoZSBleHRlbnNpb24gSUQgYW5kIG1hbmlmZXN0LjwvcD5gO3JldHVybn1lbHNle2IuaW5uZXJIVE1MPSIifTtmb3IobGV0IGMgb2YgYSl7bGV0IGQ9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgiYnV0dG9uIik7ZC5pbm5lclRleHQ9YEZyZWV6ZSAke2MubmFtZX1gO2Qub25jbGljaz0oKT0+e2J1dHRvbl9oYW5kbGVyKGMpfTtiLmFwcGVuZChkKX19ZnVuY3Rpb24gYnV0dG9uX2hhbmRsZXIoYSl7bGV0IGI9IWNvbmZpcm0oIkFmdGVyIGhpdHRpbmcgT0ssIHRoZXJlIHdpbGwgYmUgYSA1IHNlY29uZCBkZWxheSB1bnRpbCB0aGUgZXh0ZW5zaW9uIHN0YXJ0cyBiZWluZyBmcm96ZW4uIFN3aXRjaCB0byBhbm90aGVyIHRhYiBpbW1lZGlhdGVseSB0byBwcmV2ZW50IHRoZSBlbnRpcmUgZGV2aWNlIGZyb20gbG9ja2luZyB1cC4iKTtpZihiKXJldHVybjtzZXRUaW1lb3V0KCgpPT57Y3JlYXRlX2lmcmFtZXMoYSl9LDUwMDApfWZ1bmN0aW9uIGNyZWF0ZV9pZnJhbWVzKGEpe2xldCBiPVtdO2xldCBjPTU7bGV0IGQ9YS51cmw7d2hpbGUodHJ1ZSl7bGV0IGU9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgiaWZyYW1lIik7ZG9jdW1lbnQuYm9keS5hcHBlbmQoZSk7Yi5wdXNoKGUpO2ZvcihsZXQgZj0wO2Y8NTA7ZisrKXtsZXQgZz1kb2N1bWVudC5jcmVhdGVFbGVtZW50KCJpZnJhbWUiKTtnLnNyYz1kO2cuc3R5bGUud2lkdGg9Zy5zdHlsZS5oZWlnaHQ9IjFweCI7ZS5jb250ZW50RG9jdW1lbnQuYm9keS5hcHBlbmQoZyl9O3doaWxlKGIubGVuZ3RoPk1hdGgubWF4KDMsMTAtIGMpKXtiWzBdLnJlbW92ZSgpO2Iuc2hpZnQoKX07YysrfX13aW5kb3cub25sb2FkPW1haW48L3NjcmlwdD48Ym9keT48ZGl2IGlkPW1haW5fZGl2PjxoMSBzdHlsZT1tYXJnaW4tdG9wOjhweD5EZXh0ZW5zaWZ5PC9oMT48cD5EZXh0ZW5zaWZ5IGlzIGFuIGV4cGxvaXQgd2hpY2ggbGV0cyB5b3UgZGlzYWJsZSBtb3N0IGFkbWluLWluc3RhbGxlZCBDaHJvbWUgZXh0ZW5zaW9ucyBmcm9tIGFueSB3ZWJwYWdlLjxoMj5JbnN0cnVjdGlvbnM8L2gyPjxvbD48bGk+T3BlbiBjaHJvbWU6Ly9leHRlbnNpb25zIGluIGEgbmV3IHRhYi4gS2VlcCB0aGlzIHBhZ2Ugb3Blbi48bGk+R28gdG8gdGhlIHNldHRpbmdzIHBhZ2UgZm9yIHRoZSBleHRlbnNpb24geW91IHdhbnQgdG8gZGlzYWJsZS48bGk+T24gdGhlIERleHRlbnNpZnkgcGFnZSwgY2xpY2sgdGhlICJmcmVlemUgZXh0ZW5zaW9uIiBidXR0b24uIEltbWVkaWF0ZWx5IHN3aXRjaCBiYWNrIHRvIHRoZSBjaHJvbWU6Ly9leHRlbnNpb25zIHRhYi48bGk+QmFjayBvbiB0aGUgY2hyb21lOi8vZXh0ZW5zaW9ucyBwYWdlLCBzcGFtIHRoZSAiYWxsb3cgYWNjZXNzIHRvIGZpbGUgVVJMcyIgc3dpdGNoIGZvciBhIGZldyBzZWNvbmRzLjxsaT5UaGUgZXh0ZW5zaW9uIHNob3VsZCBub3cgYmUgdGVtcG9yYXJpbHkgZGlzYWJsZWQuIEZvciB0aGlzIGVmZmVjdCB0byBwZXJzaXN0LCBmbGlwIHRoZSAiYWxsb3cgYWNjZXNzIHRvIGZpbGUgVVJMcyIgYWdhaW4gZXZlcnkgZmV3IG1pbnV0ZXMsIG9yIGlmIHBhZ2VzIHN0YXJ0IGdldHRpbmcgYmxvY2tlZCBhZ2Fpbi48bGk+WW91IG1heSBhbHNvIG5lZWQgdG8gcmVvcGVuIHRoaXMgcGFnZSBldmVyeSBvbmNlIGluIGEgd2hpbGUgdG8gcHJldmVudCBhbiB1bmF2b2lkYWJsZSBtZW1vcnkgbGVhayBmcm9tIGNyYXNoaW5nIHRoZSBzeXN0ZW0uPC9vbD48cD5EdXJpbmcgdGhpcyBwcm9jZXNzLCB5b3VyIENocm9tZWJvb2sgbWF5IGhhbmcgbW9tZW50YXJpbHkuIFRoaXMgaXMgbm9ybWFsLCBhbmQgaXQgc2hvdWxkIHJlc29sdmUgaXRzZWxmIGFmdGVyIGEgZmV3IHNlY29uZHMuPGRpdiBpZD1idXR0b25zX2NvbnRhaW5lcj48cD48aT5EZXRlY3RpbmcgZXh0ZW5zaW9ucy4uLjwvaT48L2Rpdj48YnI+PGhyPjxkZXRhaWxzPjxzdW1tYXJ5IHN0eWxlPW1hcmdpbi1ib3R0b206OHB4Pk1hZGUgYnkgPGEgaHJlZj1odHRwczovL2FkaW5nLmRldiB0YXJnZXQ9X2JsYW5rPmFkaW5nMjIxMDwvYT4uIFRoaXMgZmlsZSBpcyBsaWNlbnNlZCB1bmRlciB0aGUgTUlUIGxpY2Vuc2UuPC9zdW1tYXJ5PiA8cHJlPk1JVCBMaWNlbnNlCkNvcHlyaWdodCAoYykgMjAyMyBhZGluZzIyMTAKClBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhIGNvcHkKb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUgIlNvZnR3YXJlIiksIHRvIGRlYWwKaW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0cwp0byB1c2UsIGNvcHksIG1vZGlmeSwgbWVyZ2UsIHB1Ymxpc2gsIGRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsCmNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQgcGVyc29ucyB0byB3aG9tIHRoZSBTb2Z0d2FyZSBpcwpmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOgoKVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUgaW5jbHVkZWQgaW4gYWxsCmNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuCgpUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgIkFTIElTIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUyBPUgpJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSwKRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4gSU4gTk8gRVZFTlQgU0hBTEwgVEhFCkFVVEhPUlMgT1IgQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVIKTElBQklMSVRZLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSwKT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgU09GVFdBUkUgT1IgVEhFIFVTRSBPUiBPVEhFUiBERUFMSU5HUyBJTiBUSEUKU09GVFdBUkUuPC9wcmU+IDxwIHN0eWxlPWZvbnQtc2l6ZToxM3B4O3RleHQtYWxpZ246cmlnaHQ+PGk+VmVyc2lvbiAxLjEuMTwvaT48L3A+PC9kZXRhaWxzPjwvZGl2Pg==" onclick="openURLFromButton(this)">Dexter</button>
+<p class="paragraph">(Use this at your own risk !)</p>
 </div>
-
 <div style="text-align: center; margin-top: 40px;">
-    <h2 class="section-header">Information</h2>
-    <div class="separator"></div>
-    <p class="paragraph">Made by NARS-ARC</p>
-    <p class="paragraph">Use at your own risk, this should be used when you have free time or at home, i am not responsible if you got caught.</p>
-    <p class="paragraph">Always include "https://" at the beginning of your URL unless you are searching the web</p>
-    <p class="paragraph">When using the searchbar, some sites may not work due to CORS policy</p>
+<h2 class="section-header">Information</h2>
+<div class="separator"></div>
+<p class="paragraph">Made by NARS-ARC</p>
+<p class="paragraph">Use at your own risk, this should be used when you have free time or at home, i am not responsible if you got caught.</p>
+<p class="paragraph">Always include "https://" at the beginning of your URL unless you are searching the web</p>
+<p class="paragraph">When using the searchbar, some sites may not work due to CORS policy</p>
 </div>
-
-  
-
 <script>
 let currentSearchEngine = "google";
 let particlesEnabled = true;
@@ -888,6 +874,4 @@ window.addEventListener("scroll", () => {
 
 startParticles();
 </script>
-
-</body>
-</html>
+</div></body></html>
